@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | Stackly Elegant Restaurant</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!--- Login Page --->
+<main class="er-auth-login-page">
+    <div class="er-auth-login-shell">
+
+        <!--- Login Visual --->
+        <section class="er-auth-login-visual">
+            <a href="index.html" class="er-auth-login-logo">
+                <span> <img src="assets/images/brand-logo.webp" alt=""> <small>ELEGANT RESTAURANT</small></span>
+            </a>
+
+            <div class="er-auth-login-visual-content">
+                <span class="er-auth-login-tag">AN EXPERIENCE WORTH REMEMBERING</span>
+                <h1>Where Every<br>Moment Becomes<br><span>Extraordinary.</span></h1>
+                <p>Discover exceptional dining, celebrate meaningful moments, and enjoy an experience crafted around you.</p>
+                <div class="er-auth-login-visual-feature">
+                    <span><i class="fa-solid fa-utensils"></i></span>
+                    <div><strong>Exceptional Dining</strong><small>Thoughtfully crafted experiences</small></div>
+                </div>
+                <div class="er-auth-login-visual-feature">
+                    <span><i class="fa-regular fa-gem"></i></span>
+                    <div><strong>Memorable Moments</strong><small>Every visit deserves something special</small></div>
+                </div>
+            </div>
+
+            <div class="er-auth-login-visual-footer">
+                <span>THE ART OF FINE DINING</span>
+                <span>EST. WITH PASSION</span>
+            </div>
+        </section>
+
+        <!--- Login Form --->
+        <section class="er-auth-login-form-side">
+            <div class="er-auth-login-form-card">
+                <a href="index.html" class="er-auth-login-mobile-logo">
+                    <i class="fa-solid fa-utensils"></i> STACKLY
+                </a>
+
+                <div class="er-auth-login-heading">
+                    <span>WELCOME BACK</span>
+                    <h2>Sign In to <em>Stackly</em></h2>
+                    <p>Enter your account details to continue.</p>
+                </div>
+
+                <form id="erAuthLoginForm">
+                    <div class="er-auth-login-role-group">
+                        <label class="er-auth-login-label">Select Account Type <span>*</span></label>
+                        <div class="er-auth-login-role-options">
+                            <label class="er-auth-login-role">
+                                <input type="radio" name="accountType" value="admin" required>
+                                <span class="er-auth-login-role-content">
+                                    <span class="er-auth-login-role-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                                    <span class="er-auth-login-role-text"><strong>Admin</strong><small>Restaurant management</small></span>
+                                    
+                                </span>
+                            </label>
+                            <label class="er-auth-login-role">
+                                <input type="radio" name="accountType" value="client" required>
+                                <span class="er-auth-login-role-content">
+                                    <span class="er-auth-login-role-icon"><i class="fa-solid fa-user"></i></span>
+                                    <span class="er-auth-login-role-text"><strong>Client</strong><small>Your dining account</small></span>
+                                   
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="er-auth-login-field">
+                        <label for="erAuthLoginEmail" class="er-auth-login-label">Email Address <span>*</span></label>
+                        <div class="er-auth-login-input-wrap">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="erAuthLoginEmail" name="email" placeholder="Enter your email address" autocomplete="email" required>
+                        </div>
+                    </div>
+
+                    <div class="er-auth-login-field">
+                        <label for="erAuthLoginPassword" class="er-auth-login-label">Password <span>*</span></label>
+                        <div class="er-auth-login-input-wrap">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="erAuthLoginPassword" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+                            <button type="button" class="er-auth-login-eye" id="erAuthPasswordToggle" aria-label="Show password" aria-pressed="false">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="er-auth-login-options">
+                        <label class="er-auth-login-remember">
+                            <input type="checkbox" id="erAuthRememberMe" name="remember">
+                            <span class="er-auth-login-checkmark"></span>
+                            <span>Remember me</span>
+                        </label>
+                        <a href="404.html" class="er-auth-login-forgot">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="er-auth-login-submit">
+                        <span>Sign In</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <div class="er-auth-login-divider"><span>OR</span></div>
+
+                <p class="er-auth-login-signup">Don't have an account? <a href="register.html">Sign Up</a></p>
+
+                <a href="index.html" class="er-auth-login-home-link">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </section>
+    </div>
+</main>
+
+<script src="assets/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard | Stackly Elegant Restaurant</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="er-dash-body" data-dashboard-title="Client Dashboard">
+
+    <!--- Dashboard Layout --->
+    <div class="er-dash-layout">
+
+        <!--- Sidebar Overlay --->
+        <div class="er-dash-overlay" id="erDashOverlay"></div>
+
+        <!--- Sidebar --->
+        <aside class="er-dash-sidebar" id="erDashSidebar">
+
+            <div class="er-dash-sidebar-top">
+                <a href="index.html" class="er-dash-logo">
+                    <img src="assets/images/brand-logo.webp" alt="Stackly Elegant Restaurant">
+                </a>
+                <button type="button" class="er-dash-close" id="erDashClose" aria-label="Close sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!--- Mobile User Information --->
+            <div class="er-dash-mobile-user">
+                <img src="assets/images/profile-2.webp" alt="Profile" class="er-dash-mobile-avatar">
+                <div class="er-dash-mobile-user-info">
+                    <strong id="erDashMobileName">Welcome</strong>
+                    <span id="erDashMobileEmail">Loading email...</span>
+                </div>
+            </div>
+
+            <!--- Sidebar Navigation --->
+            <nav class="er-dash-navigation">
+                <span class="er-dash-nav-label">MAIN MENU</span>
+
+                <a href="client-dashboard.html" class="er-dash-nav-link" data-section="dashboard">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="client-reservations.html" class="er-dash-nav-link" data-section="reservations">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span>Reservations</span>
+                </a>
+
+                <a href="client-menu.html" class="er-dash-nav-link active" data-section="menu">
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Menu</span>
+                </a>
+
+                <a href="client-profile.html" class="er-dash-nav-link" data-section="profile">
+                    <i class="fa-regular fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+
+                <div class="er-dash-nav-bottom">
+                    <a href="#" class="er-dash-nav-link er-dash-logout" id="erDashLogout">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="er-dash-sidebar-footer">
+                <span>THE ART OF FINE DINING</span>
+                <small>© 2026 STACKLY</small>
+            </div>
+        </aside>
+
+        <!--- Main Area --->
+        <div class="er-dash-main">
+
+            <!--- Topbar --->
+            <header class="er-dash-topbar">
+                <div class="er-dash-topbar-left">
+                    <button type="button" class="er-dash-menu-toggle" id="erDashMenuToggle" aria-label="Open navigation"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <div class="er-dash-page-heading">
+                        <span>STACKLY / WORKSPACE</span>
+                        <h1 id="erDashPageTitle">Admin Dashboard</h1>
+                    </div>
+                </div>
+
+                <div class="er-dash-topbar-right">
+                    <div class="er-dash-topbar-user">
+                        <div class="er-dash-topbar-user-info">
+                            <strong id="erDashTopbarName">Welcome</strong>
+                            <span id="erDashTopbarEmail">Loading email...</span>
+                        </div>
+                        <img src="assets/images/profile-2.webp" alt="Profile image" class="er-dash-topbar-avatar">
+                    </div>
+                </div>
+            </header>
+
+
+
+            <!--- Client Menu --->
+            <main class="er-dash-content er-client-menu" id="menu">
+
+                <!--- Menu Welcome --->
+                <section class="er-client-menu-welcome">
+                    <div class="er-client-menu-welcome-content">
+                        <span class="er-client-menu-eyebrow">A WORLD OF FLAVOUR</span>
+                        <h2>Discover Our <span>Menu</span></h2>
+                        <p>Explore thoughtfully prepared dishes, seasonal ingredients and signature creations from our
+                            kitchen.</p>
+                        <a href="404.html" class="er-client-menu-book-btn">
+                            <i class="fa-regular fa-calendar-check"></i> Reserve Your Table
+                        </a>
+                    </div>
+                    <div class="er-client-menu-welcome-decoration">
+                        <i class="fa-solid fa-utensils"></i>
+                        <span>CRAFTED WITH PASSION</span>
+                    </div>
+                </section>
+
+                <!--- Menu Highlights --->
+                <section class="er-client-menu-highlights">
+                    <div class="er-client-menu-highlight">
+                        <i class="fa-solid fa-leaf"></i>
+                        <div><strong>Fresh Ingredients</strong><span>Carefully selected produce</span></div>
+                    </div>
+                    <div class="er-client-menu-highlight">
+                        <i class="fa-solid fa-fire-burner"></i>
+                        <div><strong>Chef Crafted</strong><span>Prepared with passion</span></div>
+                    </div>
+                    <div class="er-client-menu-highlight">
+                        <i class="fa-solid fa-award"></i>
+                        <div><strong>Signature Flavours</strong><span>Memorable dining moments</span></div>
+                    </div>
+                </section>
+
+                <!--- Menu Catalogue --->
+                <section class="er-client-menu-catalogue">
+
+                    <!--- Menu Heading --->
+                    <div class="er-client-menu-section-heading">
+                        <div>
+                            <span class="er-client-menu-eyebrow">EXPLORE OUR COLLECTION</span>
+                            <h3>Our Delicious Menu</h3>
+                            <p>Find something wonderful for your next dining experience.</p>
+                        </div>
+                        <span class="er-client-menu-total" id="erClientMenuCount">Showing 8 dishes</span>
+                    </div>
+
+                    <!--- Menu Search and Filters --->
+                    <div class="er-client-menu-toolbar">
+                        <div class="er-client-menu-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" id="erClientMenuSearch" placeholder="Search dishes or ingredients..."
+                                aria-label="Search menu">
+                        </div>
+                        <button type="button" class="er-client-menu-reset" id="erClientMenuReset">
+                            <i class="fa-solid fa-rotate-left"></i> Reset
+                        </button>
+                    </div>
+
+                    <!--- Menu Category Filters --->
+                    <div class="er-client-menu-categories" id="erClientMenuCategories">
+                        <button type="button" class="er-client-menu-category active" data-category="all">All
+                            Dishes</button>
+                        <button type="button" class="er-client-menu-category" data-category="starters">Starters</button>
+                        <button type="button" class="er-client-menu-category" data-category="main-course">Main
+                            Course</button>
+                        <button type="button" class="er-client-menu-category" data-category="seafood">Seafood</button>
+                        <button type="button" class="er-client-menu-category" data-category="desserts">Desserts</button>
+                        <button type="button" class="er-client-menu-category"
+                            data-category="beverages">Beverages</button>
+                    </div>
+
+                    <!--- Menu Dietary Filter --->
+                    <div class="er-client-menu-options">
+                        <span><i class="fa-solid fa-utensils"></i> Browse our kitchen selection</span>
+                        <label class="er-client-menu-veg-filter">
+                            <input type="checkbox" id="erClientMenuVeg">
+                            <span class="er-client-menu-toggle"></span>
+                            Vegetarian only
+                        </label>
+                    </div>
+
+                    <!--- Menu Product Grid --->
+                    <div class="er-client-menu-grid" id="erClientMenuGrid">
+
+                        <!--- Menu Item One --->
+                        <article class="er-client-menu-item" data-category="starters" data-vegetarian="true"
+                            data-status="available">
+                            <div class="er-client-menu-image">
+                                <img src="assets/images/hero-food.webp"
+                                    alt="Truffle mushroom soup" loading="lazy">
+                                <span class="er-client-menu-tag">CHEF'S SPECIAL</span>
+                                <span class="er-client-menu-veg"><i class="fa-solid fa-circle"></i> Vegetarian</span>
+                            </div>
+                            <div class="er-client-menu-item-content">
+                                <div class="er-client-menu-item-meta"><span>STARTERS</span><span
+                                        class="er-client-menu-rating"><i class="fa-solid fa-star"></i> 4.9</span></div>
+                                <h4>Truffle Mushroom Soup</h4>
+                                <p>Wild mushrooms blended with cream, fresh herbs and a touch of truffle oil.</p>
+                                <div class="er-client-menu-item-footer"><strong>₹420</strong><a href="404.html"
+                                        aria-label="View Truffle Mushroom Soup details"><i
+                                            class="fa-solid fa-arrow-right"></i></a></div>
+                            </div>
+                        </article>
+
+                        <!--- Menu Item Two --->
+                        <article class="er-client-menu-item" data-category="starters" data-vegetarian="true"
+                            data-status="available">
+                            <div class="er-client-menu-image">
+                                <img src="assets/images/menu-filet-mignon.webp"
+                                    alt="Golden cheese croquettes" loading="lazy">
+                                <span class="er-client-menu-tag">POPULAR</span>
+                                <span class="er-client-menu-veg"><i class="fa-solid fa-circle"></i> Vegetarian</span>
+                            </div>
+                            <div class="er-client-menu-item-content">
+                                <div class="er-client-menu-item-meta"><span>STARTERS</span><span
+                                        class="er-client-menu-rating"><i class="fa-solid fa-star"></i> 4.8</span></div>
+                                <h4>Golden Cheese Croquettes</h4>
+                                <p>Crispy golden bites filled with smoked cheese, herbs and house aioli.</p>
+                                <div class="er-client-menu-item-footer"><strong>₹380</strong><a href="404.html"
+                                        aria-label="View Golden Cheese Croquettes details"><i
+                                            class="fa-solid fa-arrow-right"></i></a></div>
+                            </div>
+                        </article>
+
+                        <!--- Menu Item Three --->
+                        <article class="er-client-menu-item" data-category="main-course" data-vegetarian="false"
+                            data-status="available">
+                            <div class="er-client-menu-image">
+                                <img src="assets/images/menu-intro-main.webp"
+                                    alt="Herb grilled chicken" loading="lazy">
+                                <span class="er-client-menu-tag">SIGNATURE DISH</span>
+                            </div>
+                            <div class="er-client-menu-item-content">
+                                <div class="er-client-menu-item-meta"><span>MAIN COURSE</span><span
+                                        class="er-client-menu-rating"><i class="fa-solid fa-star"></i> 4.9</span></div>
+                                <h4>Herb Grilled Chicken</h4>
+                                <p>Juicy grilled chicken with seasonal vegetables and rosemary jus.</p>
+                                <div class="er-client-menu-item-footer"><strong>₹890</strong><a href="404.html"
+                                        aria-label="View Herb Grilled Chicken details"><i
+                                            class="fa-solid fa-arrow-right"></i></a></div>
+                            </div>
+                        </article>
+
+                        <!--- Menu Item Four --->
+                        <article class="er-client-menu-item" data-category="main-course" data-vegetarian="true"
+                            data-status="available">
+                            <div class="er-client-menu-image">
+                                <img src="assets/images/menu-mushroom-risotto.webp"
+                                    alt="Wild mushroom risotto" loading="lazy">
+                                <span class="er-client-menu-tag">VEGETARIAN</span>
+                                <span class="er-client-menu-veg"><i class="fa-solid fa-circle"></i> Vegetarian</span>
+                            </div>
+                            <div class="er-client-menu-item-content">
+                                <div class="er-client-menu-item-meta"><span>MAIN COURSE</span><span
+                                        class="er-client-menu-rating"><i class="fa-solid fa-star"></i> 4.7</span></div>
+                                <h4>Wild Mushroom Risotto</h4>
+                                <p>Creamy Arborio rice with wild mushrooms, parmesan and truffle oil.</p>
+                                <div class="er-client-menu-item-footer"><strong>₹760</strong><a href="404.html"
+                                        aria-label="View Wild Mushroom Risotto details"><i
+                                            class="fa-solid fa-arrow-right"></i></a></div>
+                            </div>
+                        </article>
+
+                        <!--- Menu Item Five --->
+                        <article class="er-client-menu-item" data-category="seafood" data-vegetarian="false"
+                            data-status="available">
+                            <div class="er-client-menu-image">
+                                <img src="assets/images/philosophy-ingredient-3.webp"
+                                    alt="Pan seared sea bass" loading="lazy">
+                                <span class="er-client-menu-tag">CHEF'S PICK</span>
+                            </div>
+                            <div class="er-client-menu-item-content">
+                                <div class="er-client-menu-item-meta"><span>SEAFOOD</span><span
+                                        class="er-client-menu-rating"><i class="fa-solid fa-star"></i> 4.9</span></div>
+                                <h4>Pan Seared Sea Bass</h4>
+                                <p>Delicately seared sea bass with lemon butter, asparagus and capers.</p>
+                                <div class="er-client-menu-item-footer"><strong>₹1,150</strong><a href="404.html"
+                                        aria-label="View Pan Seared Sea Bass details"><i
+                                            class="fa-solid fa-arrow-right"></i></a></div>
+                            </div>
+                        </article>
+
+                        <!--- Menu Item Six --->
+                        <article class="er-client-menu-item" data-category="desserts" data-vegetarian="true"
+                            data-status="available">
+                            <div class="er-client-menu-image">
+                                <img src="assets/images/menu-chocolate-fondant.webp"
+                                    alt="Chocolate fondant dessert" loading="lazy">
+                                <span class="er-client-menu-tag">BEST SELLER</span>
+                                <span class="er-client-menu-veg"><i class="fa-solid fa-circle"></i> Vegetarian</span>
+                            </div>
+                            <div class="er-client-menu-item-content">
+                                <div class="er-client-menu-item-meta"><span>DESSERTS</span><span
+                                        class="er-client-menu-rating"><i class="fa-solid fa-star"></i> 5.0</span></div>
+                                <h4>Classic Chocolate Fondant</h4>
+                                <p>Warm dark chocolate fondant served with smooth vanilla ice cream.</p>
+                                <div class="er-client-menu-item-footer"><strong>₹460</strong><a href="404.html"
+                                        aria-label="View Classic Chocolate Fondant details"><i
+                                            class="fa-solid fa-arrow-right"></i></a></div>
+                            </div>
+                        </article>
+
+                        <!--- Menu Item Seven --->
+                        <article class="er-client-menu-item" data-category="desserts" data-vegetarian="true"
+                            data-status="unavailable">
+                            <div class="er-client-menu-image">
+                                <img src="assets/images/dessert-panna-cotta.webp"
+                                    alt="Vanilla panna cotta" loading="lazy">
+                                <span class="er-client-menu-tag">SEASONAL</span>
+                                <span class="er-client-menu-veg"><i class="fa-solid fa-circle"></i> Vegetarian</span>
+                                <span class="er-client-menu-unavailable">Currently Unavailable</span>
+                            </div>
+                            <div class="er-client-menu-item-content">
+                                <div class="er-client-menu-item-meta"><span>DESSERTS</span><span
+                                        class="er-client-menu-rating"><i class="fa-solid fa-star"></i> 4.8</span></div>
+                                <h4>Vanilla Bean Panna Cotta</h4>
+                                <p>Silky vanilla panna cotta finished with fresh berries and coulis.</p>
+                                <div class="er-client-menu-item-footer"><strong>₹390</strong><a href="404.html"
+                                        aria-label="View Vanilla Bean Panna Cotta details"><i
+                                            class="fa-solid fa-arrow-right"></i></a></div>
+                            </div>
+                        </article>
+
+                        <!--- Menu Item Eight --->
+                        <article class="er-client-menu-item" data-category="beverages" data-vegetarian="true"
+                            data-status="available">
+                            <div class="er-client-menu-image">
+                                <img src="assets/images/philosophy-ingredient-1.webp"
+                                    alt="Signature espresso coffee" loading="lazy">
+                                <span class="er-client-menu-tag">HOUSE FAVOURITE</span>
+                                <span class="er-client-menu-veg"><i class="fa-solid fa-circle"></i> Vegetarian</span>
+                            </div>
+                            <div class="er-client-menu-item-content">
+                                <div class="er-client-menu-item-meta"><span>BEVERAGES</span><span
+                                        class="er-client-menu-rating"><i class="fa-solid fa-star"></i> 4.8</span></div>
+                                <h4>Signature Espresso</h4>
+                                <p>Freshly ground premium coffee with a rich and balanced finish.</p>
+                                <div class="er-client-menu-item-footer"><strong>₹220</strong><a href="404.html"
+                                        aria-label="View Signature Espresso details"><i
+                                            class="fa-solid fa-arrow-right"></i></a></div>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!--- Menu Empty State --->
+                    <div class="er-client-menu-empty" id="erClientMenuEmpty" hidden>
+                        <i class="fa-solid fa-utensils"></i>
+                        <h4>No dishes found</h4>
+                        <p>Try another search or select a different category.</p>
+                    </div>
+
+                </section>
+
+                <!--- Menu Reservation Banner --->
+                <section class="er-client-menu-cta">
+                    <div>
+                        <span class="er-client-menu-eyebrow">YOUR TABLE IS WAITING</span>
+                        <h3>Make Your Next Meal Memorable</h3>
+                        <p>Join us for an unforgettable dining experience.</p>
+                    </div>
+                    <a href="404.html">Reserve a Table <i class="fa-solid fa-arrow-right"></i></a>
+                </section>
+
+            </main>
+
+
+        </div>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/client-menu.js"></script>
+</body>
+
+</html>

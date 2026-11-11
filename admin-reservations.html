@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Stackly Elegant Restaurant</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="er-dash-body" data-dashboard-title="Admin Dashboard">
+
+    <!--- Dashboard Layout --->
+    <div class="er-dash-layout">
+
+        <!--- Sidebar Overlay --->
+        <div class="er-dash-overlay" id="erDashOverlay"></div>
+
+        <!--- Sidebar --->
+        <aside class="er-dash-sidebar" id="erDashSidebar">
+
+            <div class="er-dash-sidebar-top">
+                <a href="index.html" class="er-dash-logo">
+                    <img src="assets/images/brand-logo.webp" alt="Stackly Elegant Restaurant">
+                </a>
+                <button type="button" class="er-dash-close" id="erDashClose" aria-label="Close sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!--- Mobile User Information --->
+            <div class="er-dash-mobile-user">
+                <img src="assets/images/profile-1.webp" alt="Profile" class="er-dash-mobile-avatar">
+                <div class="er-dash-mobile-user-info">
+                    <strong id="erDashMobileName">Welcome</strong>
+                    <span id="erDashMobileEmail">Loading email...</span>
+                </div>
+            </div>
+
+            <!--- Sidebar Navigation --->
+            <nav class="er-dash-navigation">
+                <span class="er-dash-nav-label">MAIN MENU</span>
+
+                <a href="admin-dashboard.html" class="er-dash-nav-link" data-section="dashboard">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="admin-reservations.html" class="er-dash-nav-link active" data-section="reservations">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span>Reservations</span>
+                </a>
+
+                <a href="admin-menu.html" class="er-dash-nav-link" data-section="menu">
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Menu</span>
+                </a>
+
+                <a href="admin-profile.html" class="er-dash-nav-link" data-section="profile">
+                    <i class="fa-regular fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+
+                <div class="er-dash-nav-bottom">
+                    <a href="#" class="er-dash-nav-link er-dash-logout" id="erDashLogout">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="er-dash-sidebar-footer">
+                <span>THE ART OF FINE DINING</span>
+                <small>© 2026 STACKLY</small>
+            </div>
+        </aside>
+
+        <!--- Main Area --->
+        <div class="er-dash-main">
+
+            <!--- Topbar --->
+            <header class="er-dash-topbar">
+                <div class="er-dash-topbar-left">
+                    <button type="button" class="er-dash-menu-toggle" id="erDashMenuToggle" aria-label="Open navigation"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <div class="er-dash-page-heading">
+                        <span>STACKLY / WORKSPACE</span>
+                        <h1 id="erDashPageTitle">Admin Dashboard</h1>
+                    </div>
+                </div>
+
+                <div class="er-dash-topbar-right">
+                    <div class="er-dash-topbar-user">
+                        <div class="er-dash-topbar-user-info">
+                            <strong id="erDashTopbarName">Welcome</strong>
+                            <span id="erDashTopbarEmail">Loading email...</span>
+                        </div>
+                        <img src="assets/images/profile-1.webp" alt="Profile image" class="er-dash-topbar-avatar">
+                    </div>
+                </div>
+            </header>
+
+            <!--- Dashboard Content --->
+
+
+            <!--- Admin Reservations --->
+            <main class="er-dash-content er-admin-reservations" id="reservations">
+
+                <!--- Reservation Welcome --->
+                <section class="er-admin-res-welcome">
+                    <div>
+                        <span class="er-admin-res-eyebrow">RESTAURANT MANAGEMENT</span>
+                        <h2>Reservation <span>Management.</span></h2>
+                        <p>Manage guest bookings, monitor reservation status and keep every dining experience organised.
+                        </p>
+                    </div>
+                    <a href="404.html" class="er-admin-res-add-btn">
+                        <i class="fa-solid fa-plus"></i> Add Reservation
+                    </a>
+                </section>
+
+                <!--- Reservation Statistics --->
+                <section class="er-admin-res-stats">
+                    <div class="er-admin-res-stat-card">
+                        <div class="er-admin-res-stat-top">
+                            <span>Total Reservations</span>
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3 id="erAdminResTotal">1284</h3>
+                        <p>All recorded bookings</p>
+                    </div>
+                    <div class="er-admin-res-stat-card">
+                        <div class="er-admin-res-stat-top">
+                            <span>Today's Bookings</span>
+                            <i class="fa-solid fa-calendar-day"></i>
+                        </div>
+                        <h3 id="erAdminResToday">36</h3>
+                        <p>Scheduled for today</p>
+                    </div>
+                    <div class="er-admin-res-stat-card">
+                        <div class="er-admin-res-stat-top">
+                            <span>Confirmed</span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <h3 id="erAdminResConfirmed">28</h3>
+                        <p>Successfully confirmed</p>
+                    </div>
+                    <div class="er-admin-res-stat-card">
+                        <div class="er-admin-res-stat-top">
+                            <span>Pending</span>
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3 id="erAdminResPending">08</h3>
+                        <p>Awaiting confirmation</p>
+                    </div>
+                </section>
+
+                <!--- Reservation Management Panel --->
+                <section class="er-admin-res-panel">
+
+                    <div class="er-admin-res-panel-heading">
+                        <div>
+                            <span class="er-admin-res-section-label">BOOKING MANAGEMENT</span>
+                            <h3>All Reservations</h3>
+                            <p>Review and manage your restaurant bookings.</p>
+                        </div>
+                        <span class="er-admin-res-total-label"><i class="fa-solid fa-list-check"></i> <span
+                                id="erAdminResResultCount">8</span> Bookings</span>
+                    </div>
+
+                    <!--- Reservation Filters --->
+                    <div class="er-admin-res-filters">
+                        <div class="er-admin-res-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" id="erAdminResSearch" placeholder="Search guest or booking ID..."
+                                aria-label="Search reservations">
+                        </div>
+
+                        <select id="erAdminResStatus" aria-label="Filter by status">
+                            <option value="all">All Status</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="pending">Pending</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+
+                        <input type="date" id="erAdminResDate" aria-label="Filter by reservation date">
+
+                        <button type="button" id="erAdminResReset" class="er-admin-res-reset">
+                            <i class="fa-solid fa-rotate-left"></i> Reset
+                        </button>
+                    </div>
+
+                    <!--- Reservation Table --->
+                    <div class="er-admin-res-table-wrap">
+                        <table class="er-admin-res-table">
+                            <thead>
+                                <tr>
+                                    <th>GUEST DETAILS</th>
+                                    <th>BOOKING ID</th>
+                                    <th>DATE & TIME</th>
+                                    <th>GUESTS</th>
+                                    <th>SEATING</th>
+                                    <th>STATUS</th>
+                                    <th>ACTION</th>
+                                </tr>
+                            </thead>
+                            <tbody id="erAdminResTableBody">
+
+                                <tr data-status="confirmed" data-date="2026-11-12">
+                                    <td>
+                                        <div class="er-admin-res-guest"><span class="er-admin-res-avatar">AM</span>
+                                            <div><strong>Alexander Morgan</strong><small>alexander@example.com</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-res-id">#ER10284</span></td>
+                                    <td>
+                                        <div class="er-admin-res-date">12 Nov 2026<small>07:30 PM</small></div>
+                                    </td>
+                                    <td>04 People</td>
+                                    <td>Indoor Dining</td>
+                                    <td><span class="er-admin-res-status confirmed">Confirmed</span></td>
+                                    <td><a href="404.html" class="er-admin-res-action" aria-label="View reservation"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
+                                </tr>
+
+                                <tr data-status="pending" data-date="2026-11-12">
+                                    <td>
+                                        <div class="er-admin-res-guest"><span class="er-admin-res-avatar">SL</span>
+                                            <div><strong>Sophia Lee</strong><small>sophia@example.com</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-res-id">#ER10283</span></td>
+                                    <td>
+                                        <div class="er-admin-res-date">12 Nov 2026<small>08:00 PM</small></div>
+                                    </td>
+                                    <td>02 People</td>
+                                    <td>Window Seating</td>
+                                    <td><span class="er-admin-res-status pending">Pending</span></td>
+                                    <td><a href="404.html" class="er-admin-res-action" aria-label="View reservation"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
+                                </tr>
+
+                                <tr data-status="confirmed" data-date="2026-11-13">
+                                    <td>
+                                        <div class="er-admin-res-guest"><span class="er-admin-res-avatar">JD</span>
+                                            <div><strong>James David</strong><small>james@example.com</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-res-id">#ER10282</span></td>
+                                    <td>
+                                        <div class="er-admin-res-date">13 Nov 2026<small>06:30 PM</small></div>
+                                    </td>
+                                    <td>06 People</td>
+                                    <td>Private Dining</td>
+                                    <td><span class="er-admin-res-status confirmed">Confirmed</span></td>
+                                    <td><a href="404.html" class="er-admin-res-action" aria-label="View reservation"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
+                                </tr>
+
+                                <tr data-status="cancelled" data-date="2026-11-13">
+                                    <td>
+                                        <div class="er-admin-res-guest"><span class="er-admin-res-avatar">EC</span>
+                                            <div><strong>Emma Carter</strong><small>emma@example.com</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-res-id">#ER10281</span></td>
+                                    <td>
+                                        <div class="er-admin-res-date">13 Nov 2026<small>07:00 PM</small></div>
+                                    </td>
+                                    <td>03 People</td>
+                                    <td>Outdoor Dining</td>
+                                    <td><span class="er-admin-res-status cancelled">Cancelled</span></td>
+                                    <td><a href="404.html" class="er-admin-res-action" aria-label="View reservation"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
+                                </tr>
+
+                                <tr data-status="confirmed" data-date="2026-11-14">
+                                    <td>
+                                        <div class="er-admin-res-guest"><span class="er-admin-res-avatar">OL</span>
+                                            <div><strong>Oliver Lewis</strong><small>oliver@example.com</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-res-id">#ER10280</span></td>
+                                    <td>
+                                        <div class="er-admin-res-date">14 Nov 2026<small>08:30 PM</small></div>
+                                    </td>
+                                    <td>02 People</td>
+                                    <td>Window Seating</td>
+                                    <td><span class="er-admin-res-status confirmed">Confirmed</span></td>
+                                    <td><a href="404.html" class="er-admin-res-action" aria-label="View reservation"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
+                                </tr>
+
+                                <tr data-status="pending" data-date="2026-11-14">
+                                    <td>
+                                        <div class="er-admin-res-guest"><span class="er-admin-res-avatar">MB</span>
+                                            <div><strong>Michael Brown</strong><small>michael@example.com</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-res-id">#ER10279</span></td>
+                                    <td>
+                                        <div class="er-admin-res-date">14 Nov 2026<small>07:00 PM</small></div>
+                                    </td>
+                                    <td>05 People</td>
+                                    <td>Indoor Dining</td>
+                                    <td><span class="er-admin-res-status pending">Pending</span></td>
+                                    <td><a href="404.html" class="er-admin-res-action" aria-label="View reservation"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
+                                </tr>
+
+                                <tr data-status="confirmed" data-date="2026-11-15">
+                                    <td>
+                                        <div class="er-admin-res-guest"><span class="er-admin-res-avatar">JW</span>
+                                            <div><strong>Jessica Wilson</strong><small>jessica@example.com</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-res-id">#ER10278</span></td>
+                                    <td>
+                                        <div class="er-admin-res-date">15 Nov 2026<small>06:00 PM</small></div>
+                                    </td>
+                                    <td>04 People</td>
+                                    <td>Outdoor Dining</td>
+                                    <td><span class="er-admin-res-status confirmed">Confirmed</span></td>
+                                    <td><a href="404.html" class="er-admin-res-action" aria-label="View reservation"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
+                                </tr>
+
+                                <tr data-status="pending" data-date="2026-11-15">
+                                    <td>
+                                        <div class="er-admin-res-guest"><span class="er-admin-res-avatar">DW</span>
+                                            <div><strong>Daniel White</strong><small>daniel@example.com</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-res-id">#ER10277</span></td>
+                                    <td>
+                                        <div class="er-admin-res-date">15 Nov 2026<small>08:00 PM</small></div>
+                                    </td>
+                                    <td>02 People</td>
+                                    <td>Indoor Dining</td>
+                                    <td><span class="er-admin-res-status pending">Pending</span></td>
+                                    <td><a href="404.html" class="er-admin-res-action" aria-label="View reservation"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="er-admin-res-empty" id="erAdminResEmpty">
+                            <i class="fa-solid fa-calendar-xmark"></i>
+                            <strong>No reservations found</strong>
+                            <span>Try changing your search or filters.</span>
+                        </div>
+                    </div>
+
+                    <!--- Reservation Pagination --->
+                    <div class="er-admin-res-pagination">
+                        <span id="erAdminResPaginationInfo">Showing 1–8 of 8 reservations</span>
+                        <div>
+                            <button type="button" id="erAdminResPrev" disabled aria-label="Previous page"><i
+                                    class="fa-solid fa-chevron-left"></i></button>
+                            <span id="erAdminResPageNumber">1</span>
+                            <button type="button" id="erAdminResNext" disabled aria-label="Next page"><i
+                                    class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+
+        </div>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-reservations.js"></script>
+</body>
+
+</html>

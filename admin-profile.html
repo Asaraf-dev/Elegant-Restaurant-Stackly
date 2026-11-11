@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Stackly Elegant Restaurant</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="er-dash-body" data-dashboard-title="Admin Dashboard">
+
+    <!--- Dashboard Layout --->
+    <div class="er-dash-layout">
+
+        <!--- Sidebar Overlay --->
+        <div class="er-dash-overlay" id="erDashOverlay"></div>
+
+        <!--- Sidebar --->
+        <aside class="er-dash-sidebar" id="erDashSidebar">
+
+            <div class="er-dash-sidebar-top">
+                <a href="index.html" class="er-dash-logo">
+                    <img src="assets/images/brand-logo.webp" alt="Stackly Elegant Restaurant">
+                </a>
+                <button type="button" class="er-dash-close" id="erDashClose" aria-label="Close sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!--- Mobile User Information --->
+            <div class="er-dash-mobile-user">
+                <img src="assets/images/profile-1.webp" alt="Profile" class="er-dash-mobile-avatar">
+                <div class="er-dash-mobile-user-info">
+                    <strong id="erDashMobileName">Welcome</strong>
+                    <span id="erDashMobileEmail">Loading email...</span>
+                </div>
+            </div>
+
+            <!--- Sidebar Navigation --->
+            <nav class="er-dash-navigation">
+                <span class="er-dash-nav-label">MAIN MENU</span>
+
+                <a href="admin-dashboard.html" class="er-dash-nav-link" data-section="dashboard">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="admin-reservations.html" class="er-dash-nav-link" data-section="reservations">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span>Reservations</span>
+                </a>
+
+                <a href="admin-menu.html" class="er-dash-nav-link" data-section="menu">
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Menu</span>
+                </a>
+
+                <a href="admin-profile.html" class="er-dash-nav-link active" data-section="profile">
+                    <i class="fa-regular fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+
+                <div class="er-dash-nav-bottom">
+                    <a href="#" class="er-dash-nav-link er-dash-logout" id="erDashLogout">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="er-dash-sidebar-footer">
+                <span>THE ART OF FINE DINING</span>
+                <small>© 2026 STACKLY</small>
+            </div>
+        </aside>
+
+        <!--- Main Area --->
+        <div class="er-dash-main">
+
+            <!--- Topbar --->
+            <header class="er-dash-topbar">
+                <div class="er-dash-topbar-left">
+                    <button type="button" class="er-dash-menu-toggle" id="erDashMenuToggle" aria-label="Open navigation"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <div class="er-dash-page-heading">
+                        <span>STACKLY / WORKSPACE</span>
+                        <h1 id="erDashPageTitle">Admin Dashboard</h1>
+                    </div>
+                </div>
+
+                <div class="er-dash-topbar-right">
+                    <div class="er-dash-topbar-user">
+                        <div class="er-dash-topbar-user-info">
+                            <strong id="erDashTopbarName">Welcome</strong>
+                            <span id="erDashTopbarEmail">Loading email...</span>
+                        </div>
+                        <img src="assets/images/profile-1.webp" alt="Profile image" class="er-dash-topbar-avatar">
+                    </div>
+                </div>
+            </header>
+
+
+            <!--- Admin Profile --->
+            <main class="er-dash-content er-admin-profile" id="profile">
+
+                <!--- Profile Welcome --->
+                <section class="er-admin-profile-welcome">
+                    <div>
+                        <span class="er-admin-profile-eyebrow">ACCOUNT SETTINGS</span>
+                        <h2>My Profile</h2>
+                        <p>Manage your personal information and account preferences.</p>
+                    </div>
+                </section>
+
+                <!--- Profile Overview Card --->
+                <section class="er-admin-profile-overview">
+                    <div class="er-admin-profile-avatar-wrap">
+                        <img src="assets/images/profile-1.webp" alt="Admin Profile" id="erAdminProfileAvatar">
+                        <span class="er-admin-profile-online"></span>
+                    </div>
+                    <div class="er-admin-profile-overview-info">
+                        <span class="er-admin-profile-role">RESTAURANT ADMINISTRATOR</span>
+                        <h3 id="erAdminProfileDisplayName">Welcome</h3>
+                        <p id="erAdminProfileDisplayEmail">admin@example.com</p>
+                        <div class="er-admin-profile-meta">
+                            <span><i class="fa-solid fa-shield-halved"></i> Administrator Account</span>
+                            <span><i class="fa-solid fa-circle-check"></i> Active</span>
+                        </div>
+                    </div>
+                    <div class="er-admin-profile-member">
+                        <span>ACCOUNT TYPE</span>
+                        <strong>Admin</strong>
+                    </div>
+                </section>
+
+                <!--- Profile Content Grid --->
+                <div class="er-admin-profile-grid">
+
+                    <!--- Personal Information --->
+                    <section class="er-admin-profile-card">
+                        <div class="er-admin-profile-card-heading">
+                            <div>
+                                <span class="er-admin-profile-eyebrow">YOUR DETAILS</span>
+                                <h3>Personal Information</h3>
+                                <p>Update your basic account information.</p>
+                            </div>
+                            <span class="er-admin-profile-heading-icon"><i class="fa-regular fa-user"></i></span>
+                        </div>
+
+                        <form id="erAdminProfileForm">
+                            <div class="er-admin-profile-form-grid">
+                                <div class="er-admin-profile-field">
+                                    <label for="erAdminProfileName">Full Name</label>
+                                    <input type="text" id="erAdminProfileName" name="name"
+                                        placeholder="Enter your full name" required minlength="2" autocomplete="name">
+                                </div>
+                                <div class="er-admin-profile-field">
+                                    <label for="erAdminProfileEmail">Email Address</label>
+                                    <input type="email" id="erAdminProfileEmail" name="email"
+                                        placeholder="Enter your email address" required autocomplete="email">
+                                </div>
+                                <div class="er-admin-profile-field">
+                                    <label for="erAdminProfilePhone">Phone Number</label>
+                                    <input type="tel" id="erAdminProfilePhone" name="phone"
+                                        placeholder="Enter 10-digit phone number" maxlength="10" inputmode="numeric"
+                                        pattern="[0-9]{10}" autocomplete="tel">
+                                </div>
+                                <div class="er-admin-profile-field">
+                                    <label for="erAdminProfileRole">Account Role</label>
+                                    <input type="text" id="erAdminProfileRole" value="Administrator" readonly>
+                                </div>
+                            </div>
+                            <div class="er-admin-profile-form-actions">
+                                <button type="reset" class="er-admin-profile-reset-btn">Discard Changes</button>
+                                <button type="submit" class="er-admin-profile-save-btn"><i
+                                        class="fa-solid fa-check"></i> Save Profile</button>
+                            </div>
+                            <p class="er-admin-profile-message" id="erAdminProfileMessage" aria-live="polite"></p>
+                        </form>
+                    </section>
+
+                    <!--- Account Information --->
+                    <section class="er-admin-profile-card er-admin-profile-account-card">
+                        <div class="er-admin-profile-card-heading">
+                            <div>
+                                <span class="er-admin-profile-eyebrow">ACCOUNT OVERVIEW</span>
+                                <h3>Account Information</h3>
+                                <p>Your account status and access details.</p>
+                            </div>
+                            <span class="er-admin-profile-heading-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                        </div>
+
+                        <div class="er-admin-profile-info-list">
+                            <div class="er-admin-profile-info-item">
+                                <span>Account Status</span>
+                                <strong class="er-admin-profile-active"><i class="fa-solid fa-circle"></i>
+                                    Active</strong>
+                            </div>
+                            <div class="er-admin-profile-info-item">
+                                <span>Account Role</span>
+                                <strong>Administrator</strong>
+                            </div>
+                            <div class="er-admin-profile-info-item">
+                                <span>Access Level</span>
+                                <strong>Full Access</strong>
+                            </div>
+                            <div class="er-admin-profile-info-item">
+                                <span>Login Email</span>
+                                <strong id="erAdminProfileAccountEmail">admin@example.com</strong>
+                            </div>
+                        </div>
+
+                        <div class="er-admin-profile-security-note">
+                            <i class="fa-solid fa-lock"></i>
+                            <div>
+                                <strong>Account Security</strong>
+                                <p>Keep your login information private and secure.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--- Change Password --->
+                    <section class="er-admin-profile-card er-admin-profile-password-card">
+                        <div class="er-admin-profile-card-heading">
+                            <div>
+                                <span class="er-admin-profile-eyebrow">SECURITY SETTINGS</span>
+                                <h3>Change Password</h3>
+                                <p>Update your password to keep your account secure.</p>
+                            </div>
+                            <span class="er-admin-profile-heading-icon"><i class="fa-solid fa-key"></i></span>
+                        </div>
+
+                        <form id="erAdminPasswordForm">
+                            <div class="er-admin-profile-password-grid">
+                                <div class="er-admin-profile-field">
+                                    <label for="erAdminCurrentPassword">Current Password</label>
+                                    <div class="er-admin-profile-password-input">
+                                        <input type="password" id="erAdminCurrentPassword"
+                                            placeholder="Enter current password" required
+                                            autocomplete="current-password">
+                                        <button type="button" data-password-target="erAdminCurrentPassword"
+                                            aria-label="Show current password"><i
+                                                class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="er-admin-profile-field">
+                                    <label for="erAdminNewPassword">New Password</label>
+                                    <div class="er-admin-profile-password-input">
+                                        <input type="password" id="erAdminNewPassword" placeholder="Enter new password"
+                                            minlength="8" required autocomplete="new-password">
+                                        <button type="button" data-password-target="erAdminNewPassword"
+                                            aria-label="Show new password"><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="er-admin-profile-field">
+                                    <label for="erAdminConfirmPassword">Confirm New Password</label>
+                                    <div class="er-admin-profile-password-input">
+                                        <input type="password" id="erAdminConfirmPassword"
+                                            placeholder="Confirm new password" minlength="8" required
+                                            autocomplete="new-password">
+                                        <button type="button" data-password-target="erAdminConfirmPassword"
+                                            aria-label="Show confirm password"><i
+                                                class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="er-admin-profile-form-actions">
+                                <button type="reset" class="er-admin-profile-reset-btn">Clear Fields</button>
+                                <button type="submit" class="er-admin-profile-save-btn"><i class="fa-solid fa-lock"></i>
+                                    Update Password</button>
+                            </div>
+                            <p class="er-admin-profile-message" id="erAdminPasswordMessage" aria-live="polite"></p>
+                        </form>
+                        <div class="er-admin-profile-password-hint">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Use at least 8 characters with uppercase, lowercase, number and special character.
+                        </div>
+                    </section>
+
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-profile.js"></script>
+</body>
+
+</html>

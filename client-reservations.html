@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard | Stackly Elegant Restaurant</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="er-dash-body" data-dashboard-title="Client Dashboard">
+
+    <!--- Dashboard Layout --->
+    <div class="er-dash-layout">
+
+        <!--- Sidebar Overlay --->
+        <div class="er-dash-overlay" id="erDashOverlay"></div>
+
+        <!--- Sidebar --->
+        <aside class="er-dash-sidebar" id="erDashSidebar">
+
+            <div class="er-dash-sidebar-top">
+                <a href="index.html" class="er-dash-logo">
+                    <img src="assets/images/brand-logo.webp" alt="Stackly Elegant Restaurant">
+                </a>
+                <button type="button" class="er-dash-close" id="erDashClose" aria-label="Close sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!--- Mobile User Information --->
+            <div class="er-dash-mobile-user">
+                <img src="assets/images/profile-2.webp" alt="Profile" class="er-dash-mobile-avatar">
+                <div class="er-dash-mobile-user-info">
+                    <strong id="erDashMobileName">Welcome</strong>
+                    <span id="erDashMobileEmail">Loading email...</span>
+                </div>
+            </div>
+
+            <!--- Sidebar Navigation --->
+            <nav class="er-dash-navigation">
+                <span class="er-dash-nav-label">MAIN MENU</span>
+
+                <a href="client-dashboard.html" class="er-dash-nav-link" data-section="dashboard">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="client-reservations.html" class="er-dash-nav-link active" data-section="reservations">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span>Reservations</span>
+                </a>
+
+                <a href="client-menu.html" class="er-dash-nav-link" data-section="menu">
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Menu</span>
+                </a>
+
+                <a href="client-profile.html" class="er-dash-nav-link" data-section="profile">
+                    <i class="fa-regular fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+
+                <div class="er-dash-nav-bottom">
+                    <a href="#" class="er-dash-nav-link er-dash-logout" id="erDashLogout">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="er-dash-sidebar-footer">
+                <span>THE ART OF FINE DINING</span>
+                <small>© 2026 STACKLY</small>
+            </div>
+        </aside>
+
+        <!--- Main Area --->
+        <div class="er-dash-main">
+
+            <!--- Topbar --->
+            <header class="er-dash-topbar">
+                <div class="er-dash-topbar-left">
+                    <button type="button" class="er-dash-menu-toggle" id="erDashMenuToggle" aria-label="Open navigation"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <div class="er-dash-page-heading">
+                        <span>STACKLY / WORKSPACE</span>
+                        <h1 id="erDashPageTitle">Admin Dashboard</h1>
+                    </div>
+                </div>
+
+                <div class="er-dash-topbar-right">
+                    <div class="er-dash-topbar-user">
+                        <div class="er-dash-topbar-user-info">
+                            <strong id="erDashTopbarName">Welcome</strong>
+                            <span id="erDashTopbarEmail">Loading email...</span>
+                        </div>
+                        <img src="assets/images/profile-2.webp" alt="Profile image" class="er-dash-topbar-avatar">
+                    </div>
+                </div>
+            </header>
+
+
+
+            <!--- Client Reservations --->
+            <main class="er-dash-content er-client-reservations" id="reservations">
+
+                <!--- Reservation Welcome --->
+                <section class="er-client-res-welcome">
+                    <div>
+                        <span class="er-client-res-eyebrow">YOUR DINING JOURNEY</span>
+                        <h2>My Reservations</h2>
+                        <p>View your upcoming dining experiences and keep track of your past bookings.</p>
+                    </div>
+                    <a href="404.html" class="er-client-res-book-btn">
+                        <i class="fa-solid fa-plus"></i> Book a Table
+                    </a>
+                </section>
+
+                <!--- Reservation Statistics --->
+                <section class="er-client-res-stats">
+                    <article class="er-client-res-stat-card">
+                        <div class="er-client-res-stat-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                        <div><span>Total Reservations</span>
+                            <h3>12</h3><small>All your bookings</small>
+                        </div>
+                    </article>
+                    <article class="er-client-res-stat-card">
+                        <div class="er-client-res-stat-icon"><i class="fa-regular fa-clock"></i></div>
+                        <div><span>Upcoming</span>
+                            <h3>02</h3><small>Scheduled experiences</small>
+                        </div>
+                    </article>
+                    <article class="er-client-res-stat-card">
+                        <div class="er-client-res-stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <div><span>Completed</span>
+                            <h3>09</h3><small>Enjoyed dining visits</small>
+                        </div>
+                    </article>
+                    <article class="er-client-res-stat-card">
+                        <div class="er-client-res-stat-icon"><i class="fa-solid fa-ban"></i></div>
+                        <div><span>Cancelled</span>
+                            <h3>01</h3><small>Cancelled bookings</small>
+                        </div>
+                    </article>
+                </section>
+
+                <!--- Upcoming Reservations --->
+                <section class="er-client-res-section">
+                    <div class="er-client-res-section-heading">
+                        <div>
+                            <span class="er-client-res-eyebrow">LOOKING FORWARD TO SEEING YOU</span>
+                            <h3>Upcoming Reservations</h3>
+                        </div>
+                        <span class="er-client-res-section-count">02 Bookings</span>
+                    </div>
+
+                    <div class="er-client-res-upcoming-grid">
+
+                        <!--- Upcoming Reservation One --->
+                        <article class="er-client-res-upcoming-card">
+                            <div class="er-client-res-card-top">
+                                <span class="er-client-res-confirmed"><i class="fa-solid fa-circle-check"></i>
+                                    Confirmed</span>
+                                <span class="er-client-res-booking-id">#ER10280</span>
+                            </div>
+                            <div class="er-client-res-event-heading">
+                                <div class="er-client-res-date-box">
+                                    <span>NOV</span>
+                                    <strong>14</strong>
+                                    <small>SATURDAY</small>
+                                </div>
+                                <div>
+                                    <span class="er-client-res-event-label">DINING EXPERIENCE</span>
+                                    <h4>Evening Fine Dining</h4>
+                                    <p>Enjoy an elegant evening with exceptional cuisine.</p>
+                                </div>
+                            </div>
+                            <div class="er-client-res-detail-list">
+                                <div><i class="fa-regular fa-clock"></i><span>7:30 PM</span></div>
+                                <div><i class="fa-solid fa-users"></i><span>2 Guests</span></div>
+                                <div><i class="fa-solid fa-chair"></i><span>Main Dining Hall</span></div>
+                            </div>
+                            <div class="er-client-res-card-footer">
+                                <a href="404.html" class="er-client-res-view-btn">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                                <a href="404.html" class="er-client-res-cancel-btn">Cancel Booking</a>
+                            </div>
+                        </article>
+
+                        <!--- Upcoming Reservation Two --->
+                        <article class="er-client-res-upcoming-card">
+                            <div class="er-client-res-card-top">
+                                <span class="er-client-res-pending"><i class="fa-solid fa-clock"></i> Pending</span>
+                                <span class="er-client-res-booking-id">#ER10291</span>
+                            </div>
+                            <div class="er-client-res-event-heading">
+                                <div class="er-client-res-date-box">
+                                    <span>NOV</span>
+                                    <strong>22</strong>
+                                    <small>SUNDAY</small>
+                                </div>
+                                <div>
+                                    <span class="er-client-res-event-label">DINING EXPERIENCE</span>
+                                    <h4>Sunday Family Brunch</h4>
+                                    <p>A relaxed brunch experience with family and friends.</p>
+                                </div>
+                            </div>
+                            <div class="er-client-res-detail-list">
+                                <div><i class="fa-regular fa-clock"></i><span>11:30 AM</span></div>
+                                <div><i class="fa-solid fa-users"></i><span>4 Guests</span></div>
+                                <div><i class="fa-solid fa-chair"></i><span>Garden Lounge</span></div>
+                            </div>
+                            <div class="er-client-res-card-footer">
+                                <a href="404.html" class="er-client-res-view-btn">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                                <a href="404.html" class="er-client-res-cancel-btn">Cancel Booking</a>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+                <!--- Reservation History --->
+                <section class="er-client-res-history">
+                    <div class="er-client-res-section-heading">
+                        <div>
+                            <span class="er-client-res-eyebrow">YOUR PAST EXPERIENCES</span>
+                            <h3>Reservation History</h3>
+                            <p>Review your previous restaurant visits.</p>
+                        </div>
+                    </div>
+
+                    <!--- Reservation Filters --->
+                    <div class="er-client-res-filters">
+                        <div class="er-client-res-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" id="erClientResSearch" placeholder="Search booking ID or experience..."
+                                aria-label="Search reservations">
+                        </div>
+                        <select id="erClientResStatus" aria-label="Filter reservation status">
+                            <option value="all">All Reservations</option>
+                            <option value="completed">Completed</option>
+                            <option value="cancelled">Cancelled</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                        <button type="button" id="erClientResReset" class="er-client-res-reset">
+                            <i class="fa-solid fa-rotate-left"></i> Reset
+                        </button>
+                    </div>
+
+                    <!--- Reservation History Table --->
+                    <div class="er-client-res-table-wrap">
+                        <table class="er-client-res-table">
+                            <thead>
+                                <tr>
+                                    <th>BOOKING ID</th>
+                                    <th>EXPERIENCE</th>
+                                    <th>DATE & TIME</th>
+                                    <th>GUESTS</th>
+                                    <th>SEATING</th>
+                                    <th>STATUS</th>
+                                    <th>ACTION</th>
+                                </tr>
+                            </thead>
+                            <tbody id="erClientResTableBody">
+                                <tr data-status="completed">
+                                    <td class="er-client-res-table-id">#ER10275</td>
+                                    <td>Anniversary Dinner</td>
+                                    <td>Nov 08, 2026 · 8:00 PM</td>
+                                    <td>2 Guests</td>
+                                    <td>Private Dining</td>
+                                    <td><span class="er-client-res-table-status completed">Completed</span></td>
+                                    <td><a href="404.html" class="er-client-res-table-action"
+                                            aria-label="View anniversary dinner"><i class="fa-regular fa-eye"></i></a>
+                                    </td>
+                                </tr>
+                                <tr data-status="completed">
+                                    <td class="er-client-res-table-id">#ER10261</td>
+                                    <td>Family Lunch</td>
+                                    <td>Oct 28, 2026 · 1:00 PM</td>
+                                    <td>5 Guests</td>
+                                    <td>Main Dining Hall</td>
+                                    <td><span class="er-client-res-table-status completed">Completed</span></td>
+                                    <td><a href="404.html" class="er-client-res-table-action"
+                                            aria-label="View family lunch"><i class="fa-regular fa-eye"></i></a></td>
+                                </tr>
+                                <tr data-status="cancelled">
+                                    <td class="er-client-res-table-id">#ER10248</td>
+                                    <td>Weekend Dinner</td>
+                                    <td>Oct 17, 2026 · 7:00 PM</td>
+                                    <td>3 Guests</td>
+                                    <td>Garden Lounge</td>
+                                    <td><span class="er-client-res-table-status cancelled">Cancelled</span></td>
+                                    <td><a href="404.html" class="er-client-res-table-action"
+                                            aria-label="View weekend dinner"><i class="fa-regular fa-eye"></i></a></td>
+                                </tr>
+                                <tr data-status="completed">
+                                    <td class="er-client-res-table-id">#ER10230</td>
+                                    <td>Birthday Celebration</td>
+                                    <td>Sep 30, 2026 · 8:30 PM</td>
+                                    <td>6 Guests</td>
+                                    <td>Private Dining</td>
+                                    <td><span class="er-client-res-table-status completed">Completed</span></td>
+                                    <td><a href="404.html" class="er-client-res-table-action"
+                                            aria-label="View birthday celebration"><i class="fa-regular fa-eye"></i></a>
+                                    </td>
+                                </tr>
+                                <tr data-status="completed">
+                                    <td class="er-client-res-table-id">#ER10218</td>
+                                    <td>Weekend Brunch</td>
+                                    <td>Sep 14, 2026 · 11:00 AM</td>
+                                    <td>2 Guests</td>
+                                    <td>Garden Lounge</td>
+                                    <td><span class="er-client-res-table-status completed">Completed</span></td>
+                                    <td><a href="404.html" class="er-client-res-table-action"
+                                            aria-label="View weekend brunch"><i class="fa-regular fa-eye"></i></a></td>
+                                </tr>
+                                <tr data-status="completed">
+                                    <td class="er-client-res-table-id">#ER10195</td>
+                                    <td>Family Dinner</td>
+                                    <td>Aug 25, 2026 · 7:30 PM</td>
+                                    <td>4 Guests</td>
+                                    <td>Main Dining Hall</td>
+                                    <td><span class="er-client-res-table-status completed">Completed</span></td>
+                                    <td><a href="404.html" class="er-client-res-table-action"
+                                            aria-label="View family dinner"><i class="fa-regular fa-eye"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="er-client-res-empty" id="erClientResEmpty" hidden>
+                            <i class="fa-regular fa-calendar-xmark"></i>
+                            <h4>No reservations found</h4>
+                            <p>Try another search or change your filters.</p>
+                        </div>
+                    </div>
+
+                    <div class="er-client-res-table-footer">
+                        <span id="erClientResResultCount">Showing 6 reservations</span>
+                        <a href="404.html" class="er-client-res-history-link">Full Reservation History <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </section>
+
+            </main>
+
+
+        </div>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/client-reservation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Stackly Elegant Restaurant</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="er-dash-body" data-dashboard-title="Admin Dashboard">
+
+    <!--- Dashboard Layout --->
+    <div class="er-dash-layout">
+
+        <!--- Sidebar Overlay --->
+        <div class="er-dash-overlay" id="erDashOverlay"></div>
+
+        <!--- Sidebar --->
+        <aside class="er-dash-sidebar" id="erDashSidebar">
+
+            <div class="er-dash-sidebar-top">
+                <a href="index.html" class="er-dash-logo">
+                    <img src="assets/images/brand-logo.webp" alt="Stackly Elegant Restaurant">
+                </a>
+                <button type="button" class="er-dash-close" id="erDashClose" aria-label="Close sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!--- Mobile User Information --->
+            <div class="er-dash-mobile-user">
+                <img src="assets/images/profile-1.webp" alt="Profile" class="er-dash-mobile-avatar">
+                <div class="er-dash-mobile-user-info">
+                    <strong id="erDashMobileName">Welcome</strong>
+                    <span id="erDashMobileEmail">Loading email...</span>
+                </div>
+            </div>
+
+            <!--- Sidebar Navigation --->
+            <nav class="er-dash-navigation">
+                <span class="er-dash-nav-label">MAIN MENU</span>
+
+                <a href="admin-dashboard.html" class="er-dash-nav-link" data-section="dashboard">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="admin-reservations.html" class="er-dash-nav-link" data-section="reservations">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span>Reservations</span>
+                </a>
+
+                <a href="admin-menu.html" class="er-dash-nav-link active" data-section="menu">
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Menu</span>
+                </a>
+
+                <a href="admin-profile.html" class="er-dash-nav-link" data-section="profile">
+                    <i class="fa-regular fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+
+                <div class="er-dash-nav-bottom">
+                    <a href="#" class="er-dash-nav-link er-dash-logout" id="erDashLogout">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="er-dash-sidebar-footer">
+                <span>THE ART OF FINE DINING</span>
+                <small>© 2026 STACKLY</small>
+            </div>
+        </aside>
+
+        <!--- Main Area --->
+        <div class="er-dash-main">
+
+            <!--- Topbar --->
+            <header class="er-dash-topbar">
+                <div class="er-dash-topbar-left">
+                    <button type="button" class="er-dash-menu-toggle" id="erDashMenuToggle" aria-label="Open navigation"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <div class="er-dash-page-heading">
+                        <span>STACKLY / WORKSPACE</span>
+                        <h1 id="erDashPageTitle">Admin Dashboard</h1>
+                    </div>
+                </div>
+
+                <div class="er-dash-topbar-right">
+                    <div class="er-dash-topbar-user">
+                        <div class="er-dash-topbar-user-info">
+                            <strong id="erDashTopbarName">Welcome</strong>
+                            <span id="erDashTopbarEmail">Loading email...</span>
+                        </div>
+                        <img src="assets/images/profile-1.webp" alt="Profile image" class="er-dash-topbar-avatar">
+                    </div>
+                </div>
+            </header>
+
+            <!--- Admin Menu --->
+            <main class="er-dash-content er-admin-menu" id="menu">
+
+                <!--- Menu Welcome --->
+                <section class="er-admin-menu-welcome">
+                    <div>
+                        <span class="er-admin-menu-eyebrow">RESTAURANT MANAGEMENT</span>
+                        <h2>Menu Management</h2>
+                        <p>Manage your dishes, categories, prices and availability.</p>
+                    </div>
+                    <a href="404.html" class="er-admin-menu-add-btn">
+                        <i class="fa-solid fa-plus"></i> Add New Item
+                    </a>
+                </section>
+
+                <!--- Menu Statistics --->
+                <section class="er-admin-menu-stats">
+                    <article class="er-admin-menu-stat-card">
+                        <div class="er-admin-menu-stat-icon"><i class="fa-solid fa-utensils"></i></div>
+                        <div><span>Total Menu Items</span>
+                            <h3>48</h3><small>Across all categories</small>
+                        </div>
+                    </article>
+                    <article class="er-admin-menu-stat-card">
+                        <div class="er-admin-menu-stat-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <div><span>Categories</span>
+                            <h3>08</h3><small>Food and beverages</small>
+                        </div>
+                    </article>
+                    <article class="er-admin-menu-stat-card">
+                        <div class="er-admin-menu-stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <div><span>Available Items</span>
+                            <h3>42</h3><small>Currently on the menu</small>
+                        </div>
+                    </article>
+                    <article class="er-admin-menu-stat-card">
+                        <div class="er-admin-menu-stat-icon"><i class="fa-solid fa-circle-pause"></i></div>
+                        <div><span>Unavailable</span>
+                            <h3>06</h3><small>Temporarily unavailable</small>
+                        </div>
+                    </article>
+                </section>
+
+                <!--- Menu Management Panel --->
+                <section class="er-admin-menu-panel">
+                    <div class="er-admin-menu-panel-heading">
+                        <div>
+                            <span class="er-admin-menu-eyebrow">MENU INVENTORY</span>
+                            <h3>All Menu Items</h3>
+                            <p>View and manage your restaurant menu items.</p>
+                        </div>
+                        <span class="er-admin-menu-item-count" id="erAdminMenuCount">Showing 8 items</span>
+                    </div>
+
+                    <!--- Menu Filters --->
+                    <div class="er-admin-menu-filters">
+                        <div class="er-admin-menu-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" id="erAdminMenuSearch" placeholder="Search dishes or ingredients..."
+                                aria-label="Search menu items">
+                        </div>
+                        <select id="erAdminMenuCategory" aria-label="Filter by category">
+                            <option value="all">All Categories</option>
+                            <option value="starters">Starters</option>
+                            <option value="main-course">Main Course</option>
+                            <option value="seafood">Seafood</option>
+                            <option value="desserts">Desserts</option>
+                            <option value="beverages">Beverages</option>
+                        </select>
+                        <select id="erAdminMenuAvailability" aria-label="Filter by availability">
+                            <option value="all">All Status</option>
+                            <option value="available">Available</option>
+                            <option value="unavailable">Unavailable</option>
+                        </select>
+                        <button type="button" id="erAdminMenuReset" class="er-admin-menu-reset">
+                            <i class="fa-solid fa-rotate-left"></i> Reset
+                        </button>
+                    </div>
+
+                    <!--- Menu Table --->
+                    <div class="er-admin-menu-table-wrap">
+                        <table class="er-admin-menu-table">
+                            <thead>
+                                <tr>
+                                    <th>MENU ITEM</th>
+                                    <th>CATEGORY</th>
+                                    <th>PRICE</th>
+                                    <th>AVAILABILITY</th>
+                                    <th>ACTION</th>
+                                </tr>
+                            </thead>
+                            <tbody id="erAdminMenuTableBody">
+                                <tr data-category="starters" data-status="available">
+                                    <td>
+                                        <div class="er-admin-menu-product">
+                                            <div class="er-admin-menu-product-icon"><i
+                                                    class="fa-solid fa-bowl-food"></i></div>
+                                            <div><strong>Truffle Mushroom Soup</strong><small>Wild mushroom, cream,
+                                                    herbs</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-menu-category">Starters</span></td>
+                                    <td class="er-admin-menu-price">₹420</td>
+                                    <td><span class="er-admin-menu-status available">Available</span></td>
+                                    <td><a href="404.html" class="er-admin-menu-action"
+                                            aria-label="Edit Truffle Mushroom Soup"><i
+                                                class="fa-regular fa-pen-to-square"></i></a></td>
+                                </tr>
+                                <tr data-category="starters" data-status="available">
+                                    <td>
+                                        <div class="er-admin-menu-product">
+                                            <div class="er-admin-menu-product-icon"><i class="fa-solid fa-cheese"></i>
+                                            </div>
+                                            <div><strong>Golden Cheese Croquettes</strong><small>Smoked cheese, herbs,
+                                                    aioli</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-menu-category">Starters</span></td>
+                                    <td class="er-admin-menu-price">₹380</td>
+                                    <td><span class="er-admin-menu-status available">Available</span></td>
+                                    <td><a href="404.html" class="er-admin-menu-action"
+                                            aria-label="Edit Golden Cheese Croquettes"><i
+                                                class="fa-regular fa-pen-to-square"></i></a></td>
+                                </tr>
+                                <tr data-category="main-course" data-status="available">
+                                    <td>
+                                        <div class="er-admin-menu-product">
+                                            <div class="er-admin-menu-product-icon"><i
+                                                    class="fa-solid fa-drumstick-bite"></i></div>
+                                            <div><strong>Herb Grilled Chicken</strong><small>Seasonal vegetables,
+                                                    rosemary jus</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-menu-category">Main Course</span></td>
+                                    <td class="er-admin-menu-price">₹890</td>
+                                    <td><span class="er-admin-menu-status available">Available</span></td>
+                                    <td><a href="404.html" class="er-admin-menu-action"
+                                            aria-label="Edit Herb Grilled Chicken"><i
+                                                class="fa-regular fa-pen-to-square"></i></a></td>
+                                </tr>
+                                <tr data-category="main-course" data-status="unavailable">
+                                    <td>
+                                        <div class="er-admin-menu-product">
+                                            <div class="er-admin-menu-product-icon"><i
+                                                    class="fa-solid fa-bowl-rice"></i></div>
+                                            <div><strong>Wild Mushroom Risotto</strong><small>Arborio rice, parmesan,
+                                                    truffle oil</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-menu-category">Main Course</span></td>
+                                    <td class="er-admin-menu-price">₹760</td>
+                                    <td><span class="er-admin-menu-status unavailable">Unavailable</span></td>
+                                    <td><a href="404.html" class="er-admin-menu-action"
+                                            aria-label="Edit Wild Mushroom Risotto"><i
+                                                class="fa-regular fa-pen-to-square"></i></a></td>
+                                </tr>
+                                <tr data-category="seafood" data-status="available">
+                                    <td>
+                                        <div class="er-admin-menu-product">
+                                            <div class="er-admin-menu-product-icon"><i class="fa-solid fa-fish"></i>
+                                            </div>
+                                            <div><strong>Pan Seared Sea Bass</strong><small>Lemon butter, asparagus,
+                                                    capers</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-menu-category">Seafood</span></td>
+                                    <td class="er-admin-menu-price">₹1,150</td>
+                                    <td><span class="er-admin-menu-status available">Available</span></td>
+                                    <td><a href="404.html" class="er-admin-menu-action"
+                                            aria-label="Edit Pan Seared Sea Bass"><i
+                                                class="fa-regular fa-pen-to-square"></i></a></td>
+                                </tr>
+                                <tr data-category="desserts" data-status="available">
+                                    <td>
+                                        <div class="er-admin-menu-product">
+                                            <div class="er-admin-menu-product-icon"><i
+                                                    class="fa-solid fa-cake-candles"></i></div>
+                                            <div><strong>Classic Chocolate Fondant</strong><small>Dark chocolate,
+                                                    vanilla ice cream</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-menu-category">Desserts</span></td>
+                                    <td class="er-admin-menu-price">₹460</td>
+                                    <td><span class="er-admin-menu-status available">Available</span></td>
+                                    <td><a href="404.html" class="er-admin-menu-action"
+                                            aria-label="Edit Classic Chocolate Fondant"><i
+                                                class="fa-regular fa-pen-to-square"></i></a></td>
+                                </tr>
+                                <tr data-category="desserts" data-status="unavailable">
+                                    <td>
+                                        <div class="er-admin-menu-product">
+                                            <div class="er-admin-menu-product-icon"><i
+                                                    class="fa-solid fa-ice-cream"></i></div>
+                                            <div><strong>Vanilla Bean Panna Cotta</strong><small>Fresh berries, berry
+                                                    coulis</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-menu-category">Desserts</span></td>
+                                    <td class="er-admin-menu-price">₹390</td>
+                                    <td><span class="er-admin-menu-status unavailable">Unavailable</span></td>
+                                    <td><a href="404.html" class="er-admin-menu-action"
+                                            aria-label="Edit Vanilla Bean Panna Cotta"><i
+                                                class="fa-regular fa-pen-to-square"></i></a></td>
+                                </tr>
+                                <tr data-category="beverages" data-status="available">
+                                    <td>
+                                        <div class="er-admin-menu-product">
+                                            <div class="er-admin-menu-product-icon"><i class="fa-solid fa-mug-hot"></i>
+                                            </div>
+                                            <div><strong>Signature Espresso</strong><small>Freshly ground premium
+                                                    coffee</small></div>
+                                        </div>
+                                    </td>
+                                    <td><span class="er-admin-menu-category">Beverages</span></td>
+                                    <td class="er-admin-menu-price">₹220</td>
+                                    <td><span class="er-admin-menu-status available">Available</span></td>
+                                    <td><a href="404.html" class="er-admin-menu-action"
+                                            aria-label="Edit Signature Espresso"><i
+                                                class="fa-regular fa-pen-to-square"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="er-admin-menu-empty" id="erAdminMenuEmpty" hidden>
+                            <i class="fa-solid fa-utensils"></i>
+                            <h4>No menu items found</h4>
+                            <p>Try changing your search or filter options.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-menu.js"></script>
+</body>
+
+</html>

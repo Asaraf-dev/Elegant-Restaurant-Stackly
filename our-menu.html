@@ -1,0 +1,587 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Menu | Elegant Restaurant</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/loader.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!--- Loader Start --->
+    <div class="er-com-loader" id="erLoader">
+        <div class="er-com-loader-particles" id="erLoaderParticles"></div>
+        <div class="er-com-loader-content">
+            <!--- Brand Logo --->
+            <div class="er-com-loader-brand">
+                <img src="assets/images/brand-logo.webp" alt="Stackly Elegant Restaurant">
+            </div>
+            <!--- Animated Circle --->
+            <div class="er-com-loader-animation">
+                <span class="er-com-loader-ring er-com-loader-ring-one"></span>
+                <span class="er-com-loader-ring er-com-loader-ring-two"></span>
+                <span class="er-com-loader-ring er-com-loader-ring-three"></span>
+                <div class="er-com-loader-center">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+            </div>
+            <!--- Loader Text --->
+            <div class="er-com-loader-text">
+                <h2>Crafting Your Experience</h2>
+                <p id="erLoaderMessage">Preparing something extraordinary...</p>
+            </div>
+            <div class="er-com-loader-decoration">
+                <span></span>
+                <i class="fa-solid fa-star"></i>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!--- Loader End --->
+
+    <!--- NavBar --->
+    <div id="erNavbarContainer"></div>
+
+    <!--- Hero Section --->
+    <div id="erInnerHeroContainer"></div>
+
+    <!--- Menu Introduction Section Start --->
+    <section class="er-menu-intro" id="erMenuIntro">
+        <div class="container">
+            <div class="er-menu-intro-layout">
+
+                <!--- Menu Introduction Images --->
+                <div class="er-menu-intro-visual">
+                    <div class="er-menu-intro-main-image">
+                        <img src="assets/images/menu-intro-main.webp"
+                            alt="Beautifully presented gourmet restaurant dish">
+                    </div>
+
+                    <div class="er-menu-intro-detail-image">
+                        <img src="assets/images/menu-intro-detail.webp"
+                            alt="Fresh ingredients prepared for fine dining">
+                    </div>
+
+                    <div class="er-menu-intro-image-label">
+                        <i class="fa-solid fa-utensils"></i>
+                        <span>Made With Passion</span>
+                    </div>
+
+                    <div class="er-menu-intro-image-decoration"></div>
+                    <span class="er-menu-intro-image-caption">A Celebration Of Culinary Art</span>
+                </div>
+
+                <!--- Menu Introduction Content --->
+                <div class="er-menu-intro-content">
+                    <span class="er-menu-intro-eyebrow">
+                        <span></span> Discover Our Collection
+                    </span>
+
+                    <h2 class="er-menu-intro-title">
+                        A Menu Crafted For <span>Every Moment.</span>
+                    </h2>
+
+                    <p class="er-menu-intro-lead">
+                        Great dining begins with great ingredients, inspired ideas and a passion for creating
+                        unforgettable flavours.
+                    </p>
+
+                    <div class="er-menu-intro-divider"></div>
+
+                    <p class="er-menu-intro-description">
+                        Our menu brings together carefully selected ingredients, creative culinary techniques and
+                        thoughtfully balanced flavours. Each dish is prepared with attention to detail, bringing
+                        something special to your table.
+                    </p>
+
+                    <p class="er-menu-intro-description">
+                        From delightful beginnings to satisfying main courses and indulgent desserts, discover a
+                        collection designed to make every visit memorable.
+                    </p>
+
+                    <!--- Menu Highlights --->
+                    <div class="er-menu-intro-highlights">
+                        <div class="er-menu-intro-highlight">
+                            <div class="er-menu-intro-highlight-icon">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h4>Quality Ingredients</h4>
+                                <span>Thoughtfully selected produce.</span>
+                            </div>
+                        </div>
+
+                        <div class="er-menu-intro-highlight">
+                            <div class="er-menu-intro-highlight-icon">
+                                <i class="fa-solid fa-fire-burner"></i>
+                            </div>
+                            <div>
+                                <h4>Culinary Creativity</h4>
+                                <span>Inspired flavours and techniques.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="404.html" class="er-menu-intro-link">
+                        <span>Explore Our Selection</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!--- Menu Introduction Bottom Strip --->
+            <div class="er-menu-intro-bottom">
+                <div class="er-menu-intro-bottom-item">
+                    <i class="fa-solid fa-seedling"></i>
+                    <span>Thoughtful Ingredients</span>
+                </div>
+
+                <span class="er-menu-intro-bottom-divider"></span>
+
+                <div class="er-menu-intro-bottom-item">
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Crafted With Care</span>
+                </div>
+
+                <span class="er-menu-intro-bottom-divider"></span>
+
+                <div class="er-menu-intro-bottom-item">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Made To Be Shared</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Menu Introduction Section End --->
+
+    <!--- Complete Food Menu Section Start --->
+    <section class="er-menu-complete" id="erMenuComplete">
+        <div class="container">
+            <div class="er-menu-complete-header">
+                <div class="er-menu-complete-heading">
+                    <span class="er-menu-complete-eyebrow">A MENU TO REMEMBER</span>
+                    <h2 class="er-menu-complete-title">Explore Our <span>Complete Menu</span></h2>
+                    <p class="er-menu-complete-description">From thoughtfully crafted beginnings to unforgettable main
+                        courses and delightful desserts, discover something exceptional in every bite.</p>
+                </div>
+                <div class="er-menu-complete-header-note">
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Freshly prepared.<br>Beautifully served.</span>
+                </div>
+            </div>
+
+            <!--- Menu Filters --->
+            <div class="er-menu-complete-controls">
+                <div class="er-menu-complete-categories">
+                    <button class="er-menu-complete-filter active" data-category="all">All Dishes
+                        <span>08</span></button>
+                    <button class="er-menu-complete-filter" data-category="starters">Starters</button>
+                    <button class="er-menu-complete-filter" data-category="soups">Soups & Salads</button>
+                    <button class="er-menu-complete-filter" data-category="main">Main Course</button>
+                    <button class="er-menu-complete-filter" data-category="seafood">Seafood</button>
+                    <button class="er-menu-complete-filter" data-category="desserts">Desserts</button>
+                </div>
+
+                <div class="er-menu-complete-tools">
+                    <div class="er-menu-complete-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" id="erMenuSearch" placeholder="Search dishes..."
+                            aria-label="Search menu dishes">
+                    </div>
+                    <div class="er-menu-complete-diet">
+                        <button class="er-menu-complete-diet-btn active" data-diet="all">All</button>
+                        <button class="er-menu-complete-diet-btn" data-diet="veg"><span
+                                class="er-menu-complete-veg-icon"></span> Veg</button>
+                        <button class="er-menu-complete-diet-btn" data-diet="nonveg"><span
+                                class="er-menu-complete-nonveg-icon"></span> Non-Veg</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--- Menu Results --->
+            <div class="er-menu-complete-result">
+                <p>Discover our selection</p>
+                <span id="erMenuResultCount">08 dishes available</span>
+            </div>
+
+            <!--- Menu Grid --->
+            <div class="er-menu-complete-grid" id="erMenuGrid">
+
+                <!--- Dish 01 --->
+                <article class="er-menu-complete-card" data-category="starters" data-diet="veg"
+                    data-search="truffle mushroom bruschetta starter mushrooms">
+                    <div class="er-menu-complete-image">
+                        <img src="assets/images/menu-truffle-bruschetta.webp" alt="Truffle Mushroom Bruschetta"
+                            loading="lazy">
+                        <span class="er-menu-complete-tag">Chef's Choice</span>
+                        <span class="er-menu-complete-diet-mark veg"><span></span></span>
+                    </div>
+                    <div class="er-menu-complete-card-content">
+                        <div class="er-menu-complete-card-top">
+                            <span class="er-menu-complete-category-label">STARTERS</span>
+                            <span class="er-menu-complete-price">₹420</span>
+                        </div>
+                        <h3>Truffle Mushroom Bruschetta</h3>
+                        <p>Toasted artisan bread topped with creamy wild mushrooms, truffle oil and fresh herbs.</p>
+                        <div class="er-menu-complete-card-bottom">
+                            <span><i class="fa-regular fa-clock"></i> 15–20 min</span>
+                            <span class="er-menu-complete-spice">Mild</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!--- Dish 02 --->
+                <article class="er-menu-complete-card" data-category="soups" data-diet="veg"
+                    data-search="roasted tomato basil soup tomato">
+                    <div class="er-menu-complete-image">
+                        <img src="assets/images/menu-tomato-soup.webp" alt="Roasted Tomato Basil Soup" loading="lazy">
+                        <span class="er-menu-complete-diet-mark veg"><span></span></span>
+                    </div>
+                    <div class="er-menu-complete-card-content">
+                        <div class="er-menu-complete-card-top">
+                            <span class="er-menu-complete-category-label">SOUPS & SALADS</span>
+                            <span class="er-menu-complete-price">₹280</span>
+                        </div>
+                        <h3>Roasted Tomato Basil Soup</h3>
+                        <p>Slow-roasted tomatoes blended with aromatic basil, cream and delicate seasoning.</p>
+                        <div class="er-menu-complete-card-bottom">
+                            <span><i class="fa-regular fa-clock"></i> 10–15 min</span>
+                            <span class="er-menu-complete-spice">Mild</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!--- Dish 03 --->
+                <article class="er-menu-complete-card" data-category="desserts" data-diet="veg"
+                    data-search="classic chocolate fondant dessert cake">
+                    <div class="er-menu-complete-image">
+                        <img src="assets/images/menu-chocolate-fondant.webp" alt="Classic Chocolate Fondant"
+                            loading="lazy">
+                        <span class="er-menu-complete-tag">Guest Favourite</span>
+                        <span class="er-menu-complete-diet-mark veg"><span></span></span>
+                    </div>
+                    <div class="er-menu-complete-card-content">
+                        <div class="er-menu-complete-card-top">
+                            <span class="er-menu-complete-category-label">DESSERTS</span>
+                            <span class="er-menu-complete-price">₹350</span>
+                        </div>
+                        <h3>Classic Chocolate Fondant</h3>
+                        <p>Warm chocolate cake with a soft molten centre, paired with smooth vanilla ice cream.</p>
+                        <div class="er-menu-complete-card-bottom">
+                            <span><i class="fa-regular fa-clock"></i> 15 min</span>
+                            <span class="er-menu-complete-spice">Sweet</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!--- Dish 04 --->
+                <article class="er-menu-complete-card" data-category="seafood" data-diet="nonveg"
+                    data-search="herb crusted grilled salmon fish seafood">
+                    <div class="er-menu-complete-image">
+                        <img src="assets/images/menu-grilled-salmon.webp" alt="Herb-Crusted Grilled Salmon"
+                            loading="lazy">
+                        <span class="er-menu-complete-diet-mark nonveg"><span></span></span>
+                    </div>
+                    <div class="er-menu-complete-card-content">
+                        <div class="er-menu-complete-card-top">
+                            <span class="er-menu-complete-category-label">SEAFOOD</span>
+                            <span class="er-menu-complete-price">₹890</span>
+                        </div>
+                        <h3>Herb-Crusted Grilled Salmon</h3>
+                        <p>Perfectly grilled salmon finished with fragrant herbs, lemon butter and seasonal vegetables.
+                        </p>
+                        <div class="er-menu-complete-card-bottom">
+                            <span><i class="fa-regular fa-clock"></i> 25–30 min</span>
+                            <span class="er-menu-complete-spice">Mild</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!--- Dish 05 --->
+                <article class="er-menu-complete-card" data-category="main" data-diet="nonveg"
+                    data-search="classic filet mignon beef steak main course">
+                    <div class="er-menu-complete-image">
+                        <img src="assets/images/menu-filet-mignon.webp" alt="Classic Filet Mignon" loading="lazy">
+                        <span class="er-menu-complete-tag">Premium</span>
+                        <span class="er-menu-complete-diet-mark nonveg"><span></span></span>
+                    </div>
+                    <div class="er-menu-complete-card-content">
+                        <div class="er-menu-complete-card-top">
+                            <span class="er-menu-complete-category-label">MAIN COURSE</span>
+                            <span class="er-menu-complete-price">₹1,150</span>
+                        </div>
+                        <h3>Classic Filet Mignon</h3>
+                        <p>Tender grilled beef fillet served with roasted vegetables and a rich red wine-style
+                            reduction.</p>
+                        <div class="er-menu-complete-card-bottom">
+                            <span><i class="fa-regular fa-clock"></i> 30–35 min</span>
+                            <span class="er-menu-complete-spice">Mild</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!--- Dish 06 --->
+                <article class="er-menu-complete-card" data-category="starters" data-diet="nonveg"
+                    data-search="crispy chicken bites chicken starter">
+                    <div class="er-menu-complete-image">
+                        <img src="assets/images/menu-chicken-bites.webp" alt="Crispy Chicken Bites" loading="lazy">
+                        <span class="er-menu-complete-diet-mark nonveg"><span></span></span>
+                    </div>
+                    <div class="er-menu-complete-card-content">
+                        <div class="er-menu-complete-card-top">
+                            <span class="er-menu-complete-category-label">STARTERS</span>
+                            <span class="er-menu-complete-price">₹480</span>
+                        </div>
+                        <h3>Crispy Chicken Bites</h3>
+                        <p>Golden chicken bites with a crisp coating, served with our signature creamy dip.</p>
+                        <div class="er-menu-complete-card-bottom">
+                            <span><i class="fa-regular fa-clock"></i> 15–20 min</span>
+                            <span class="er-menu-complete-spice">Medium</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!--- Dish 07 --->
+                <article class="er-menu-complete-card" data-category="main" data-diet="veg"
+                    data-search="wild mushroom truffle risotto rice main course">
+                    <div class="er-menu-complete-image">
+                        <img src="assets/images/menu-mushroom-risotto.webp" alt="Wild Mushroom Risotto" loading="lazy">
+                        <span class="er-menu-complete-tag">Signature</span>
+                        <span class="er-menu-complete-diet-mark veg"><span></span></span>
+                    </div>
+                    <div class="er-menu-complete-card-content">
+                        <div class="er-menu-complete-card-top">
+                            <span class="er-menu-complete-category-label">MAIN COURSE</span>
+                            <span class="er-menu-complete-price">₹650</span>
+                        </div>
+                        <h3>Wild Mushroom Risotto</h3>
+                        <p>Creamy Arborio rice with seasonal mushrooms, aged parmesan and a touch of truffle.</p>
+                        <div class="er-menu-complete-card-bottom">
+                            <span><i class="fa-regular fa-clock"></i> 25–30 min</span>
+                            <span class="er-menu-complete-spice">Mild</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!--- Dish 08 --->
+                <article class="er-menu-complete-card" data-category="desserts" data-diet="veg"
+                    data-search="classic vanilla panna cotta dessert">
+                    <div class="er-menu-complete-image">
+                        <img src="assets/images/menu-panna-cotta.webp" alt="Vanilla Panna Cotta" loading="lazy">
+                        <span class="er-menu-complete-diet-mark veg"><span></span></span>
+                    </div>
+                    <div class="er-menu-complete-card-content">
+                        <div class="er-menu-complete-card-top">
+                            <span class="er-menu-complete-category-label">DESSERTS</span>
+                            <span class="er-menu-complete-price">₹320</span>
+                        </div>
+                        <h3>Vanilla Panna Cotta</h3>
+                        <p>Silky vanilla cream dessert served with seasonal berry compote and fresh mint.</p>
+                        <div class="er-menu-complete-card-bottom">
+                            <span><i class="fa-regular fa-clock"></i> 10–15 min</span>
+                            <span class="er-menu-complete-spice">Sweet</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!--- Empty State --->
+            <div class="er-menu-complete-empty" id="erMenuEmpty">
+                <i class="fa-solid fa-bowl-food"></i>
+                <h3>No dishes found</h3>
+                <p>Try another search or choose a different category.</p>
+                <button type="button" id="erMenuReset">View All Dishes</button>
+            </div>
+
+            <div class="er-menu-complete-footer">
+                <p>Have something special in mind?</p>
+                <a href="404.html">Talk To Our Team <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--- Complete Food Menu Section End --->
+
+    <!--- Desserts & Sweet Endings Section Start --->
+    <section class="er-menu-desserts" id="erMenuDesserts">
+        <div class="container">
+            <!--- Section Heading --->
+            <div class="er-menu-desserts-heading">
+                <div class="er-menu-desserts-heading-content">
+                    <span class="er-menu-desserts-eyebrow">A LITTLE SOMETHING SWEET</span>
+                    <h2 class="er-menu-desserts-title">Sweet Moments, <span>Beautiful Endings.</span></h2>
+                    <p class="er-menu-desserts-description">Every memorable meal deserves a beautiful finale. Explore
+                        our handcrafted desserts, where delicate flavours and artistic presentation come together.</p>
+                </div>
+                <div class="er-menu-desserts-heading-decoration">
+                    <span>THE ART OF</span>
+                    <i class="fa-solid fa-heart"></i>
+                    <span>INDULGENCE</span>
+                </div>
+            </div>
+
+            <!--- Featured Dessert --->
+            <div class="er-menu-desserts-featured">
+                <div class="er-menu-desserts-featured-image">
+                    <img src="assets/images/dessert-featured.webp"
+                        alt="Signature chocolate dessert with rich molten centre" loading="lazy">
+                    <span class="er-menu-desserts-featured-label">THE SIGNATURE EXPERIENCE</span>
+                </div>
+                <div class="er-menu-desserts-featured-content">
+                    <span class="er-menu-desserts-overline">OUR CHEF'S SIGNATURE DESSERT</span>
+                    <h3>The Midnight <span>Chocolate</span> Indulgence</h3>
+                    <p>A celebration of fine chocolate, crafted with a delicate crisp exterior and a rich, velvety
+                        molten heart. Served with vanilla bean ice cream and a touch of seasonal berries.</p>
+                    <div class="er-menu-desserts-featured-details">
+                        <div>
+                            <span>PREPARATION</span>
+                            <strong>20 Minutes</strong>
+                        </div>
+                        <div>
+                            <span>EXPERIENCE</span>
+                            <strong>Rich & Decadent</strong>
+                        </div>
+                    </div>
+                    <div class="er-menu-desserts-featured-bottom">
+                        <div class="er-menu-desserts-featured-price">
+                            <span>AN INDULGENT TREAT</span>
+                            <strong>₹420</strong>
+                        </div>
+                        <a href="404.html" class="er-menu-desserts-featured-btn">Enjoy This Dessert <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!--- Dessert Collection --->
+            <div class="er-menu-desserts-collection">
+                <div class="er-menu-desserts-collection-heading">
+                    <div>
+                        <span class="er-menu-desserts-overline">MADE TO DELIGHT</span>
+                        <h3>Our Sweet Collection</h3>
+                    </div>
+                    <p>Little masterpieces, prepared with care and served with love.</p>
+                </div>
+
+                <div class="er-menu-desserts-grid">
+                    <!--- Dessert 01 --->
+                    <article class="er-menu-desserts-card">
+                        <div class="er-menu-desserts-card-image">
+                            <img src="assets/images/dessert-panna-cotta.webp"
+                                alt="Vanilla Panna Cotta with fresh berries" loading="lazy">
+                            <span class="er-menu-desserts-card-number">01</span>
+                        </div>
+                        <div class="er-menu-desserts-card-content">
+                            <div class="er-menu-desserts-card-title">
+                                <h4>Vanilla Panna Cotta</h4>
+                                <span>₹320</span>
+                            </div>
+                            <p>Silky vanilla cream with seasonal berry compote and a delicate mint finish.</p>
+                            <div class="er-menu-desserts-card-meta">
+                                <span><i class="fa-solid fa-leaf"></i> Vegetarian</span>
+                                <span>Delicately Sweet</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--- Dessert 02 --->
+                    <article class="er-menu-desserts-card">
+                        <div class="er-menu-desserts-card-image">
+                            <img src="assets/images/dessert-tiramisu.webp" alt="Classic Italian tiramisu dessert"
+                                loading="lazy">
+                            <span class="er-menu-desserts-card-number">02</span>
+                        </div>
+                        <div class="er-menu-desserts-card-content">
+                            <div class="er-menu-desserts-card-title">
+                                <h4>Classic Italian Tiramisu</h4>
+                                <span>₹380</span>
+                            </div>
+                            <p>Layers of espresso-soaked sponge, mascarpone cream and fine cocoa dust.</p>
+                            <div class="er-menu-desserts-card-meta">
+                                <span><i class="fa-solid fa-leaf"></i> Vegetarian</span>
+                                <span>Rich & Creamy</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--- Dessert 03 --->
+                    <article class="er-menu-desserts-card">
+                        <div class="er-menu-desserts-card-image">
+                            <img src="assets/images/dessert-cheesecake.webp" alt="New York style baked cheesecake"
+                                loading="lazy">
+                            <span class="er-menu-desserts-card-number">03</span>
+                        </div>
+                        <div class="er-menu-desserts-card-content">
+                            <div class="er-menu-desserts-card-title">
+                                <h4>New York Cheesecake</h4>
+                                <span>₹360</span>
+                            </div>
+                            <p>Classic baked cheesecake on a buttery biscuit base with berry sauce.</p>
+                            <div class="er-menu-desserts-card-meta">
+                                <span><i class="fa-solid fa-leaf"></i> Vegetarian</span>
+                                <span>Smooth & Creamy</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--- Desserts & Sweet Endings Section End --->
+
+    <!--- Footer --->
+    <div id="erFooterContainer"></div>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/our_menu.js"></script>
+    <script src="assets/js/inner-hero.js"></script>
+</body>
+
+</html>

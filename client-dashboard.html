@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard | Stackly Elegant Restaurant</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="er-dash-body" data-dashboard-title="Client Dashboard">
+
+    <!--- Dashboard Layout --->
+    <div class="er-dash-layout">
+
+        <!--- Sidebar Overlay --->
+        <div class="er-dash-overlay" id="erDashOverlay"></div>
+
+        <!--- Sidebar --->
+        <aside class="er-dash-sidebar" id="erDashSidebar">
+
+            <div class="er-dash-sidebar-top">
+                <a href="index.html" class="er-dash-logo">
+                    <img src="assets/images/brand-logo.webp" alt="Stackly Elegant Restaurant">
+                </a>
+                <button type="button" class="er-dash-close" id="erDashClose" aria-label="Close sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!--- Mobile User Information --->
+            <div class="er-dash-mobile-user">
+                <img src="assets/images/profile-2.webp" alt="Profile" class="er-dash-mobile-avatar">
+                <div class="er-dash-mobile-user-info">
+                    <strong id="erDashMobileName">Welcome</strong>
+                    <span id="erDashMobileEmail">Loading email...</span>
+                </div>
+            </div>
+
+            <!--- Sidebar Navigation --->
+            <nav class="er-dash-navigation">
+                <span class="er-dash-nav-label">MAIN MENU</span>
+
+                <a href="client-dashboard.html" class="er-dash-nav-link active" data-section="dashboard">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="client-reservations.html" class="er-dash-nav-link" data-section="reservations">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span>Reservations</span>
+                </a>
+
+                <a href="client-menu.html" class="er-dash-nav-link" data-section="menu">
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Menu</span>
+                </a>
+
+                <a href="client-profile.html" class="er-dash-nav-link" data-section="profile">
+                    <i class="fa-regular fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+
+                <div class="er-dash-nav-bottom">
+                    <a href="#" class="er-dash-nav-link er-dash-logout" id="erDashLogout">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="er-dash-sidebar-footer">
+                <span>THE ART OF FINE DINING</span>
+                <small>© 2026 STACKLY</small>
+            </div>
+        </aside>
+
+        <!--- Main Area --->
+        <div class="er-dash-main">
+
+            <!--- Topbar --->
+            <header class="er-dash-topbar">
+                <div class="er-dash-topbar-left">
+                    <button type="button" class="er-dash-menu-toggle" id="erDashMenuToggle" aria-label="Open navigation"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <div class="er-dash-page-heading">
+                        <span>STACKLY / WORKSPACE</span>
+                        <h1 id="erDashPageTitle">Admin Dashboard</h1>
+                    </div>
+                </div>
+
+                <div class="er-dash-topbar-right">
+                    <div class="er-dash-topbar-user">
+                        <div class="er-dash-topbar-user-info">
+                            <strong id="erDashTopbarName">Welcome</strong>
+                            <span id="erDashTopbarEmail">Loading email...</span>
+                        </div>
+                        <img src="assets/images/profile-2.webp" alt="Profile image" class="er-dash-topbar-avatar">
+                    </div>
+                </div>
+            </header>
+
+
+
+            <!--- Client Overview --->
+            <main class="er-dash-content er-client-overview" id="dashboard">
+
+                <!--- Client Welcome --->
+                <section class="er-client-overview-welcome">
+                    <div class="er-client-overview-welcome-content">
+                        <span class="er-client-overview-eyebrow">YOUR DINING EXPERIENCE</span>
+                        <h2>Welcome Back, <span id="erClientWelcomeName">Guest</span></h2>
+                        <p>We're delighted to have you back. Discover exceptional dining and manage your restaurant
+                            experiences.</p>
+                        <div class="er-client-overview-welcome-actions">
+                            <a href="404.html" class="er-client-overview-primary-btn"><i
+                                    class="fa-regular fa-calendar-plus"></i> Book a Table</a>
+                            <a href="404.html" class="er-client-overview-outline-btn">Explore Menu <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="er-client-overview-welcome-decoration">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                        <span>THE ART OF FINE DINING</span>
+                    </div>
+                </section>
+
+                <!--- Client Statistics --->
+                <section class="er-client-overview-stats">
+                    <article class="er-client-overview-stat-card">
+                        <div class="er-client-overview-stat-icon"><i class="fa-regular fa-calendar-check"></i></div>
+                        <div><span>Total Reservations</span>
+                            <h3>12</h3><small>Your dining visits booked</small>
+                        </div>
+                    </article>
+                    <article class="er-client-overview-stat-card">
+                        <div class="er-client-overview-stat-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div><span>Upcoming Bookings</span>
+                            <h3>02</h3><small>Looking forward to seeing you</small>
+                        </div>
+                    </article>
+                    <article class="er-client-overview-stat-card">
+                        <div class="er-client-overview-stat-icon"><i class="fa-solid fa-heart"></i></div>
+                        <div><span>Favourite Dishes</span>
+                            <h3>04</h3><small>Your saved food choices</small>
+                        </div>
+                    </article>
+                    <article class="er-client-overview-stat-card">
+                        <div class="er-client-overview-stat-icon"><i class="fa-solid fa-star"></i></div>
+                        <div><span>Membership</span>
+                            <h3>Gold</h3><small>Exclusive dining experience</small>
+                        </div>
+                    </article>
+                </section>
+
+                <!--- Client Dashboard Main Grid --->
+                <div class="er-client-overview-main-grid">
+
+                    <!--- Upcoming Reservation --->
+                    <section class="er-client-overview-card er-client-overview-upcoming">
+                        <div class="er-client-overview-section-heading">
+                            <div>
+                                <span class="er-client-overview-eyebrow">YOUR NEXT EXPERIENCE</span>
+                                <h3>Upcoming Reservation</h3>
+                            </div>
+                            <a href="404.html">View All <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="er-client-overview-booking">
+                            <div class="er-client-overview-booking-date">
+                                <span>NOV</span>
+                                <strong>14</strong>
+                                <small>SATURDAY</small>
+                            </div>
+                            <div class="er-client-overview-booking-details">
+                                <span class="er-client-overview-booking-status">CONFIRMED</span>
+                                <h4>Evening Fine Dining</h4>
+                                <p><i class="fa-regular fa-clock"></i> 7:30 PM</p>
+                                <p><i class="fa-solid fa-users"></i> 2 Guests</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Main Dining Hall</p>
+                                <span class="er-client-overview-booking-id">Booking ID: #ER10280</span>
+                            </div>
+                            <div class="er-client-overview-booking-actions">
+                                <a href="404.html" aria-label="View reservation"><i
+                                        class="fa-regular fa-eye"></i></a>
+                                <a href="404.html" aria-label="Edit reservation"><i
+                                        class="fa-regular fa-pen-to-square"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="er-client-overview-booking-secondary">
+                            <div class="er-client-overview-secondary-icon"><i class="fa-regular fa-calendar"></i></div>
+                            <div>
+                                <strong>Sunday Brunch</strong>
+                                <span>November 22, 2026 · 11:30 AM · 4 Guests</span>
+                            </div>
+                            <span class="er-client-overview-pending">Pending</span>
+                        </div>
+                    </section>
+
+                    <!--- Quick Actions --->
+                    <section class="er-client-overview-card er-client-overview-quick">
+                        <div class="er-client-overview-section-heading">
+                            <div>
+                                <span class="er-client-overview-eyebrow">MAKE IT SPECIAL</span>
+                                <h3>Quick Actions</h3>
+                            </div>
+                        </div>
+                        <div class="er-client-overview-quick-list">
+                            <a href="404.html" class="er-client-overview-quick-item">
+                                <span class="er-client-overview-quick-icon"><i
+                                        class="fa-regular fa-calendar-plus"></i></span>
+                                <span><strong>Book a Table</strong><small>Reserve your next visit</small></span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <a href="our-menu.html" class="er-client-overview-quick-item">
+                                <span class="er-client-overview-quick-icon"><i class="fa-solid fa-utensils"></i></span>
+                                <span><strong>Explore Our Menu</strong><small>Discover signature dishes</small></span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <a href="client-reservations.html" class="er-client-overview-quick-item">
+                                <span class="er-client-overview-quick-icon"><i
+                                        class="fa-regular fa-calendar-check"></i></span>
+                                <span><strong>My Reservations</strong><small>Manage your bookings</small></span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <a href="client-profile.html" class="er-client-overview-quick-item">
+                                <span class="er-client-overview-quick-icon"><i class="fa-regular fa-user"></i></span>
+                                <span><strong>Update Profile</strong><small>Manage your details</small></span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!--- Recent Reservations --->
+                <section class="er-client-overview-card er-client-overview-recent">
+                    <div class="er-client-overview-section-heading">
+                        <div>
+                            <span class="er-client-overview-eyebrow">YOUR DINING HISTORY</span>
+                            <h3>Recent Reservations</h3>
+                        </div>
+                        <a href="404.html">View All <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="er-client-overview-table-wrap">
+                        <table class="er-client-overview-table">
+                            <thead>
+                                <tr>
+                                    <th>BOOKING ID</th>
+                                    <th>EXPERIENCE</th>
+                                    <th>DATE & TIME</th>
+                                    <th>GUESTS</th>
+                                    <th>STATUS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="er-client-overview-booking-number">#ER10275</td>
+                                    <td>Anniversary Dinner</td>
+                                    <td>Nov 08, 2026 · 8:00 PM</td>
+                                    <td>2 Guests</td>
+                                    <td><span class="er-client-overview-table-status completed">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="er-client-overview-booking-number">#ER10261</td>
+                                    <td>Family Lunch</td>
+                                    <td>Oct 28, 2026 · 1:00 PM</td>
+                                    <td>5 Guests</td>
+                                    <td><span class="er-client-overview-table-status completed">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="er-client-overview-booking-number">#ER10248</td>
+                                    <td>Weekend Dinner</td>
+                                    <td>Oct 17, 2026 · 7:00 PM</td>
+                                    <td>3 Guests</td>
+                                    <td><span class="er-client-overview-table-status cancelled">Cancelled</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!--- Favourite Dishes --->
+                <section class="er-client-overview-favourites">
+                    <div class="er-client-overview-section-heading">
+                        <div>
+                            <span class="er-client-overview-eyebrow">A TASTE OF YOUR FAVOURITES</span>
+                            <h3>Discover Something Special</h3>
+                        </div>
+                        <a href="404.html">View Full Menu <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="er-client-overview-favourite-grid">
+                        <article class="er-client-overview-favourite-card">
+                            <div class="er-client-overview-favourite-image er-client-overview-favourite-image-one">
+                                <span>CHEF'S SPECIAL</span>
+                            </div>
+                            <div class="er-client-overview-favourite-info">
+                                <div>
+                                    <h4>Herb Grilled Chicken</h4><span>Main Course</span>
+                                </div>
+                                <strong>₹890</strong>
+                            </div>
+                        </article>
+                        <article class="er-client-overview-favourite-card">
+                            <div class="er-client-overview-favourite-image er-client-overview-favourite-image-two">
+                                <span>POPULAR CHOICE</span>
+                            </div>
+                            <div class="er-client-overview-favourite-info">
+                                <div>
+                                    <h4>Chocolate Fondant</h4><span>Desserts</span>
+                                </div>
+                                <strong>₹460</strong>
+                            </div>
+                        </article>
+                        <article class="er-client-overview-favourite-card">
+                            <div class="er-client-overview-favourite-image er-client-overview-favourite-image-three">
+                                <span>HOUSE FAVOURITE</span>
+                            </div>
+                            <div class="er-client-overview-favourite-info">
+                                <div>
+                                    <h4>Truffle Mushroom Soup</h4><span>Starters</span>
+                                </div>
+                                <strong>₹420</strong>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+            </main>
+
+        </div>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/client-overview.js"></script>
+</body>
+
+</html>

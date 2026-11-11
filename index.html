@@ -1,0 +1,671 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Elegant Restaurant</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Main favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- webp favicons -->
+  <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+  <!-- Apple -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- Android -->
+  <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+  <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="assets/images/site.webmanifest" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!--- Bootstrap Icon --->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/loader.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!--- Loader Start --->
+  <div class="er-com-loader" id="erLoader">
+    <div class="er-com-loader-particles" id="erLoaderParticles"></div>
+    <div class="er-com-loader-content">
+      <!--- Brand Logo --->
+      <div class="er-com-loader-brand">
+        <img src="assets/images/brand-logo.webp" alt="Stackly Elegant Restaurant">
+      </div>
+      <!--- Animated Circle --->
+      <div class="er-com-loader-animation">
+        <span class="er-com-loader-ring er-com-loader-ring-one"></span>
+        <span class="er-com-loader-ring er-com-loader-ring-two"></span>
+        <span class="er-com-loader-ring er-com-loader-ring-three"></span>
+        <div class="er-com-loader-center">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+      </div>
+      <!--- Loader Text --->
+      <div class="er-com-loader-text">
+        <h2>Crafting Your Experience</h2>
+        <p id="erLoaderMessage">Preparing something extraordinary...</p>
+      </div>
+      <div class="er-com-loader-decoration">
+        <span></span>
+        <i class="fa-solid fa-star"></i>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!--- Loader End --->
+
+  <!--- NavBar --->
+  <div id="erNavbarContainer"></div>
+
+  <!--- Hero Section Start --->
+  <section class="er-ind-hero">
+    <div class="er-ind-hero-bg"></div>
+    <div class="container">
+      <div class="er-ind-hero-wrapper">
+        <!--- Hero Content --->
+        <div class="er-ind-hero-content">
+          <div class="er-ind-hero-eyebrow">
+            <span></span>
+            <p>WELCOME TO STACKLY</p>
+            <span></span>
+          </div>
+          <h1 class="er-ind-hero-title">
+            Where Every
+            <span>Moment</span>
+            Becomes a
+            <em>Masterpiece.</em>
+          </h1>
+          <p class="er-ind-hero-description">
+            Discover the art of exceptional dining, where extraordinary flavours, thoughtful craftsmanship and timeless
+            elegance come together.
+          </p>
+          <div class="er-ind-hero-actions">
+            <a href="404.html" class="er-ind-hero-primary-btn">
+              <span>Reserve Your Table</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="404.html" class="er-ind-hero-secondary-btn">
+              <span>Explore Our Menu</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <!--- Hero Highlights --->
+          <div class="er-ind-hero-highlights">
+            <div class="er-ind-hero-highlight">
+              <span class="er-ind-hero-highlight-number">01</span>
+              <div>
+                <h5>Fine Dining</h5>
+                <p>An elevated experience</p>
+              </div>
+            </div>
+            <div class="er-ind-hero-highlight-divider"></div>
+            <div class="er-ind-hero-highlight">
+              <span class="er-ind-hero-highlight-number">02</span>
+              <div>
+                <h5>Crafted With Care</h5>
+                <p>Passion in every detail</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--- Hero Visual --->
+        <div class="er-ind-hero-visual">
+          <div class="er-ind-hero-image-main">
+            <img src="assets/images/hero-dining.webp" alt="Luxury restaurant fine dining experience">
+            <div class="er-ind-hero-image-overlay"></div>
+            <div class="er-ind-hero-image-caption">
+              <span>THE ART OF DINING</span>
+            </div>
+          </div>
+          <!--- Floating Food Image --->
+          <div class="er-ind-hero-image-small">
+            <img src="assets/images/hero-food.webp" alt="Chef's signature gourmet dish">
+          </div>
+          <!--- Floating Experience Card --->
+          <div class="er-ind-hero-experience">
+            <div class="er-ind-hero-experience-icon">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <div>
+              <span>AN EXPERIENCE</span>
+              <h4>Beyond The Plate</h4>
+            </div>
+          </div>
+          <!--- Decorative Circle --->
+          <div class="er-ind-hero-circle">
+            <span>EST. 2024</span>
+          </div>
+        </div>
+      </div>
+      <!--- Hero Bottom --->
+      <div class="er-ind-hero-bottom">
+        <div class="er-ind-hero-bottom-left">
+          <span></span>
+          <p>EXCEPTIONAL TASTE. TIMELESS MEMORIES.</p>
+        </div>
+        <a class="er-ind-hero-scroll">
+          <span>SCROLL TO DISCOVER</span>
+          <i class="fa-solid fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!--- Hero Section End --->
+
+  <!--- Welcome / About Us Section Start --->
+  <section class="er-ind-about" id="erIndDiscover">
+    <div class="container">
+      <div class="er-ind-about-wrapper">
+        <!--- About Images --->
+        <div class="er-ind-about-visual">
+          <div class="er-ind-about-image-main">
+            <img src="assets/images/about-welcome-detail.webp" alt="Elegant Stackly restaurant dining interior">
+            <div class="er-ind-about-image-label">
+              <span>THE STACKLY EXPERIENCE</span>
+            </div>
+          </div>
+          <div class="er-ind-about-image-secondary">
+            <img src="assets/images/about-welcome-main.webp" alt="Exquisite gourmet cuisine served at Stackly">
+          </div>
+          <div class="er-ind-about-experience">
+            <span class="er-ind-about-experience-number">01</span>
+            <div>
+              <h4>Exceptional</h4>
+              <p>In Every Detail</p>
+            </div>
+          </div>
+          <div class="er-ind-about-image-decoration"></div>
+        </div>
+        <!--- About Content --->
+        <div class="er-ind-about-content">
+          <div class="er-ind-about-eyebrow">
+            <span></span>
+            <p>A LITTLE ABOUT US</p>
+          </div>
+          <h2 class="er-ind-about-title">
+            More Than Dining,
+            <span>It's An Art.</span>
+          </h2>
+          <p class="er-ind-about-intro">
+            Welcome to Stackly, where exceptional flavours meet timeless elegance.
+          </p>
+          <p class="er-ind-about-description">
+            We believe that a memorable dining experience is about more than what's on your plate. It's about the
+            atmosphere, the people, the little details and the moments that stay with you long after the last bite.
+          </p>
+          <p class="er-ind-about-description">
+            From thoughtfully prepared dishes to warm hospitality, every element at Stackly is designed to make your
+            time with us truly special.
+          </p>
+          <!--- About Highlights --->
+          <div class="er-ind-about-highlights">
+            <div class="er-ind-about-highlight">
+              <span class="er-ind-about-highlight-icon">
+                <i class="fa-solid fa-leaf"></i>
+              </span>
+              <div>
+                <h4>Thoughtful Ingredients</h4>
+                <p>Quality in every creation</p>
+              </div>
+            </div>
+            <div class="er-ind-about-highlight">
+              <span class="er-ind-about-highlight-icon">
+                <i class="fa-solid fa-heart"></i>
+              </span>
+              <div>
+                <h4>Made With Passion</h4>
+                <p>Care behind every detail</p>
+              </div>
+            </div>
+          </div>
+          <!--- About Footer --->
+          <div class="er-ind-about-footer">
+            <a href="404.html" class="er-ind-about-btn">
+              <span>Discover Our Story</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <div class="er-ind-about-signature">
+              <span>THE ART OF HOSPITALITY</span>
+              <p>Stackly Elegant Restaurant</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--- Welcome / About Us Section End --->
+
+  <!--- Signature Dishes Section Start --->
+  <section class="er-ind-dishes" id="erIndDishes">
+    <div class="container">
+      <!--- Section Heading --->
+      <div class="er-ind-dishes-heading">
+        <div class="er-ind-dishes-heading-content">
+          <div class="er-ind-dishes-eyebrow">
+            <span></span>
+            <p>CURATED WITH PASSION</p>
+            <span></span>
+          </div>
+          <h2 class="er-ind-dishes-title">
+            A Taste Of
+            <span>Something Extraordinary.</span>
+          </h2>
+          <p class="er-ind-dishes-description">
+            Discover our chef's carefully crafted signature creations, where exceptional ingredients meet unforgettable
+            flavours.
+          </p>
+        </div>
+        <a href="404.html" class="er-ind-dishes-view-all">
+          <span>Explore Full Menu</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+      <!--- Dish Cards --->
+      <div class="er-ind-dishes-grid">
+        <!--- Dish One --->
+        <article class="er-ind-dishes-card">
+          <div class="er-ind-dishes-card-image">
+            <img src="assets/images/dish-risotto.webp" alt="Truffle Mushroom Risotto">
+            <span class="er-ind-dishes-card-number">01</span>
+            <span class="er-ind-dishes-card-tag">CHEF'S SPECIAL</span>
+          </div>
+          <div class="er-ind-dishes-card-content">
+            <div class="er-ind-dishes-card-meta">
+              <span>VEGETARIAN</span>
+              <span>HOUSE FAVOURITE</span>
+            </div>
+            <div class="er-ind-dishes-card-title-row">
+              <h3>Truffle Mushroom Risotto</h3>
+              <span class="er-ind-dishes-price">₹650</span>
+            </div>
+            <p>Creamy Arborio rice with wild mushrooms, delicate herbs and a touch of aromatic truffle.</p>
+            <a href="404.html" class="er-ind-dishes-card-link">
+              DISCOVER DISH <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+        <!--- Dish Two --->
+        <article class="er-ind-dishes-card er-ind-dishes-card-featured">
+          <div class="er-ind-dishes-card-image">
+            <img src="assets/images/dish-salmon.webp" alt="Herb-Crusted Grilled Salmon">
+            <span class="er-ind-dishes-card-number">02</span>
+            <span class="er-ind-dishes-card-tag">SIGNATURE PICK</span>
+          </div>
+          <div class="er-ind-dishes-card-content">
+            <div class="er-ind-dishes-card-meta">
+              <span>SEAFOOD</span>
+              <span>CHEF RECOMMENDED</span>
+            </div>
+            <div class="er-ind-dishes-card-title-row">
+              <h3>Herb-Crusted Grilled Salmon</h3>
+              <span class="er-ind-dishes-price">₹890</span>
+            </div>
+            <p>Perfectly grilled salmon finished with fresh garden herbs, citrus butter and seasonal vegetables.</p>
+            <a href="404.html" class="er-ind-dishes-card-link">
+              DISCOVER DISH <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+        <!--- Dish Three --->
+        <article class="er-ind-dishes-card">
+          <div class="er-ind-dishes-card-image">
+            <img src="assets/images/dish-steak.webp" alt="Classic Filet Mignon">
+            <span class="er-ind-dishes-card-number">03</span>
+            <span class="er-ind-dishes-card-tag">PREMIUM SELECTION</span>
+          </div>
+          <div class="er-ind-dishes-card-content">
+            <div class="er-ind-dishes-card-meta">
+              <span>GRILL SPECIAL</span>
+              <span>PREMIUM CUT</span>
+            </div>
+            <div class="er-ind-dishes-card-title-row">
+              <h3>Classic Filet Mignon</h3>
+              <span class="er-ind-dishes-price">₹1,150</span>
+            </div>
+            <p>Tender grilled filet served with roasted vegetables, rich signature sauce and delicate seasoning.</p>
+            <a href="404.html" class="er-ind-dishes-card-link">
+              DISCOVER DISH <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+      <!--- Bottom Message --->
+      <div class="er-ind-dishes-bottom">
+        <span></span>
+        <p>GOOD FOOD. BEAUTIFULLY CRAFTED. UNFORGETTABLE MOMENTS.</p>
+        <span></span>
+      </div>
+    </div>
+  </section>
+  <!--- Signature Dishes Section End --->
+
+  <!--- Why Choose Us Section Start --->
+  <section class="er-ind-why" id="erIndWhy">
+    <div class="container">
+      <div class="er-ind-why-wrapper">
+        <!--- Why Choose Visual --->
+        <div class="er-ind-why-visual">
+          <div class="er-ind-why-image">
+            <img src="assets/images/why-choose-us.webp" alt="Luxury fine dining restaurant experience">
+            <div class="er-ind-why-image-overlay"></div>
+            <div class="er-ind-why-image-caption">
+              <span>WHERE PASSION MEETS PERFECTION</span>
+            </div>
+          </div>
+          <!--- Floating Experience Card --->
+          <div class="er-ind-why-experience">
+            <span class="er-ind-why-experience-icon">
+              <i class="fa-solid fa-star"></i>
+            </span>
+            <div>
+              <h4>Beyond Expectations</h4>
+              <p>Every Visit, A Special Memory</p>
+            </div>
+          </div>
+          <!--- Decorative Element --->
+          <div class="er-ind-why-decoration">
+            <span>THE ART OF</span>
+            <strong>HOSPITALITY</strong>
+            <span>STACKLY EXPERIENCE</span>
+          </div>
+        </div>
+        <!--- Why Choose Content --->
+        <div class="er-ind-why-content">
+          <div class="er-ind-why-eyebrow">
+            <span></span>
+            <p>THE STACKLY DIFFERENCE</p>
+          </div>
+          <h2 class="er-ind-why-title">
+            Why Every Detail
+            <span>Makes A Difference.</span>
+          </h2>
+          <p class="er-ind-why-description">
+            Great dining is never just about the food. It's the perfect harmony of flavour, craftsmanship, atmosphere
+            and heartfelt hospitality.
+          </p>
+          <!--- Why Choose Features --->
+          <div class="er-ind-why-list">
+            <!--- Feature One --->
+            <div class="er-ind-why-item">
+              <span class="er-ind-why-number">01</span>
+              <div class="er-ind-why-icon">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <div class="er-ind-why-item-content">
+                <h3>Carefully Selected Ingredients</h3>
+                <p>Thoughtfully chosen ingredients bring freshness, quality and authentic flavours to every creation.
+                </p>
+              </div>
+            </div>
+            <!--- Feature Two --->
+            <div class="er-ind-why-item">
+              <span class="er-ind-why-number">02</span>
+              <div class="er-ind-why-icon">
+                <i class="fa-solid fa-fire-burner"></i>
+              </div>
+              <div class="er-ind-why-item-content">
+                <h3>Expert Culinary Craftsmanship</h3>
+                <p>Our approach combines creativity, precision and passion to make every dish memorable.</p>
+              </div>
+            </div>
+            <!--- Feature Three --->
+            <div class="er-ind-why-item">
+              <span class="er-ind-why-number">03</span>
+              <div class="er-ind-why-icon">
+                <i class="fa-solid fa-handshake-angle"></i>
+              </div>
+              <div class="er-ind-why-item-content">
+                <h3>Exceptional Hospitality</h3>
+                <p>Warm welcomes and attentive service make every guest feel genuinely valued.</p>
+              </div>
+            </div>
+            <!--- Feature Four --->
+            <div class="er-ind-why-item">
+              <span class="er-ind-why-number">04</span>
+              <div class="er-ind-why-icon">
+                <i class="fa-solid fa-champagne-glasses"></i>
+              </div>
+              <div class="er-ind-why-item-content">
+                <h3>An Unforgettable Ambience</h3>
+                <p>Discover a welcoming setting where beautiful surroundings turn dining into an experience.</p>
+              </div>
+            </div>
+          </div>
+          <!--- Why Choose CTA --->
+          <div class="er-ind-why-footer">
+            <a href="404.html" class="er-ind-why-btn">
+              <span>Discover What Makes Us Special</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <span class="er-ind-why-footer-note">A DIFFERENT KIND OF DINING</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--- Why Choose Us Section End --->
+
+  <!--- Private Dining & Events Section Start --->
+  <section class="er-ind-events" id="erIndEvents">
+    <div class="er-ind-events-background">
+      <img src="assets/images/private-events-bg.webp" alt="Luxury private dining event setup">
+    </div>
+    <div class="er-ind-events-overlay"></div>
+    <div class="container">
+      <div class="er-ind-events-wrapper">
+        <!--- Events Content --->
+        <div class="er-ind-events-content">
+          <div class="er-ind-events-eyebrow">
+            <span></span>
+            <p>CELEBRATE SOMETHING SPECIAL</p>
+          </div>
+          <h2 class="er-ind-events-title">
+            Moments Made
+            <span>To Be Remembered.</span>
+          </h2>
+          <p class="er-ind-events-description">
+            From intimate celebrations to elegant private gatherings, let us create a beautiful setting for the moments
+            that matter most.
+          </p>
+          <!--- Event Categories --->
+          <div class="er-ind-events-categories">
+            <div class="er-ind-events-category">
+              <span class="er-ind-events-category-icon">
+                <i class="fa-solid fa-cake-candles"></i>
+              </span>
+              <div>
+                <h3>Birthday Celebrations</h3>
+                <p>Make every birthday feel extraordinary.</p>
+              </div>
+            </div>
+            <div class="er-ind-events-category">
+              <span class="er-ind-events-category-icon">
+                <i class="fa-solid fa-heart"></i>
+              </span>
+              <div>
+                <h3>Anniversary Dinners</h3>
+                <p>Celebrate your story in an intimate setting.</p>
+              </div>
+            </div>
+            <div class="er-ind-events-category">
+              <span class="er-ind-events-category-icon">
+                <i class="fa-solid fa-champagne-glasses"></i>
+              </span>
+              <div>
+                <h3>Private & Corporate Events</h3>
+                <p>Bring people together over exceptional dining.</p>
+              </div>
+            </div>
+          </div>
+          <!--- Events CTA --->
+          <div class="er-ind-events-actions">
+            <a href="404.html" class="er-ind-events-btn">
+              <span>Plan Your Private Event</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <span class="er-ind-events-note">LET'S MAKE IT MEMORABLE</span>
+          </div>
+        </div>
+        <!--- Events Side Detail --->
+        <div class="er-ind-events-side">
+          <div class="er-ind-events-side-frame">
+            <span class="er-ind-events-side-line"></span>
+            <i class="fa-solid fa-star"></i>
+            <span>EXCLUSIVELY YOURS</span>
+            <h3>Celebrate<br>In Style.</h3>
+            <p>Every gathering deserves a special touch.</p>
+            <span class="er-ind-events-side-bottom">STACKLY ELEGANT RESTAURANT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--- Private Dining & Events Section End --->
+
+  <!--- Guest Testimonials Section Start --->
+  <section class="er-ind-testimonials" id="erIndTestimonials">
+    <div class="container">
+      <div class="er-ind-testimonials-header">
+        <div class="er-ind-testimonials-heading">
+          <span class="er-ind-testimonials-subtitle">Words From Our Guests</span>
+          <h2 class="er-ind-testimonials-title">An Experience Worth <span>Sharing.</span></h2>
+        </div>
+        <p class="er-ind-testimonials-description">Every visit creates a memory. Discover what our guests have to say
+          about their moments with us.</p>
+      </div>
+
+      <div class="er-ind-testimonials-featured">
+        <div class="er-ind-testimonials-featured-quote">
+          <i class="fa-solid fa-quote-left"></i>
+          <div class="er-ind-testimonials-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote>
+            "An absolutely beautiful dining experience. From the warm welcome to the incredible presentation of every
+            dish, everything felt thoughtfully crafted. A place we will return to again and again."
+          </blockquote>
+          <div class="er-ind-testimonials-author">
+            <div class="er-ind-testimonials-avatar">SC</div>
+            <div>
+              <h4>Sarah C.</h4>
+              <span>Regular Guest</span>
+            </div>
+          </div>
+        </div>
+        <div class="er-ind-testimonials-featured-image">
+          <img src="assets/images/testimonial-featured.webp" alt="Elegant fine dining experience">
+          <div class="er-ind-testimonials-image-caption">
+            <span>Memorable Moments</span>
+            <p>Made with care, remembered forever.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="er-ind-testimonials-grid">
+        <article class="er-ind-testimonials-card">
+          <div class="er-ind-testimonials-card-top">
+            <div class="er-ind-testimonials-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <i class="fa-solid fa-quote-right er-ind-testimonials-quote-icon"></i>
+          </div>
+          <p>"The atmosphere was simply stunning, and the food exceeded every expectation. Perfect for a special
+            evening."</p>
+          <div class="er-ind-testimonials-author">
+            <div class="er-ind-testimonials-avatar">JM</div>
+            <div>
+              <h4>James M.</h4><span>Verified Guest</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="er-ind-testimonials-card">
+          <div class="er-ind-testimonials-card-top">
+            <div class="er-ind-testimonials-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <i class="fa-solid fa-quote-right er-ind-testimonials-quote-icon"></i>
+          </div>
+          <p>"Exceptional hospitality and beautifully prepared dishes. The staff made our anniversary truly
+            unforgettable."</p>
+          <div class="er-ind-testimonials-author">
+            <div class="er-ind-testimonials-avatar">EP</div>
+            <div>
+              <h4>Emily P.</h4><span>Verified Guest</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="er-ind-testimonials-card">
+          <div class="er-ind-testimonials-card-top">
+            <div class="er-ind-testimonials-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <i class="fa-solid fa-quote-right er-ind-testimonials-quote-icon"></i>
+          </div>
+          <p>"A wonderful blend of elegance, flavour and comfort. Every detail made the evening feel special."</p>
+          <div class="er-ind-testimonials-author">
+            <div class="er-ind-testimonials-avatar">DL</div>
+            <div>
+              <h4>Daniel L.</h4><span>Verified Guest</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="er-ind-testimonials-bottom">
+        <span>Thank you for making us part of your story.</span>
+        <a href="404.html">Create Your Own Experience <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+  <!--- Guest Testimonials Section End --->
+
+
+  <!--- Footer --->
+  <div id="erFooterContainer"></div>
+
+  <!--- Js Files --->
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+
+  <!-- Page JS -->
+  <script src="assets/js/index.js"></script>
+</body>
+
+</html>

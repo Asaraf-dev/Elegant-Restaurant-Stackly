@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Stackly Elegant Restaurant</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="er-dash-body" data-dashboard-title="Admin Dashboard">
+
+    <!--- Dashboard Layout --->
+    <div class="er-dash-layout">
+
+        <!--- Sidebar Overlay --->
+        <div class="er-dash-overlay" id="erDashOverlay"></div>
+
+        <!--- Sidebar --->
+        <aside class="er-dash-sidebar" id="erDashSidebar">
+
+            <div class="er-dash-sidebar-top">
+                <a href="index.html" class="er-dash-logo">
+                    <img src="assets/images/brand-logo.webp" alt="Stackly Elegant Restaurant">
+                </a>
+                <button type="button" class="er-dash-close" id="erDashClose" aria-label="Close sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!--- Mobile User Information --->
+            <div class="er-dash-mobile-user">
+                <img src="assets/images/profile-1.webp" alt="Profile" class="er-dash-mobile-avatar">
+                <div class="er-dash-mobile-user-info">
+                    <strong id="erDashMobileName">Welcome</strong>
+                    <span id="erDashMobileEmail">Loading email...</span>
+                </div>
+            </div>
+
+            <!--- Sidebar Navigation --->
+            <nav class="er-dash-navigation">
+                <span class="er-dash-nav-label">MAIN MENU</span>
+
+                <a href="admin-dashboard.html" class="er-dash-nav-link active" data-section="dashboard">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="admin-reservations.html" class="er-dash-nav-link" data-section="reservations">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span>Reservations</span>
+                </a>
+
+                <a href="admin-menu.html" class="er-dash-nav-link" data-section="menu">
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Menu</span>
+                </a>
+
+                <a href="admin-profile.html" class="er-dash-nav-link" data-section="profile">
+                    <i class="fa-regular fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+
+                <div class="er-dash-nav-bottom">
+                    <a href="#" class="er-dash-nav-link er-dash-logout" id="erDashLogout">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="er-dash-sidebar-footer">
+                <span>THE ART OF FINE DINING</span>
+                <small>© 2026 STACKLY</small>
+            </div>
+        </aside>
+
+        <!--- Main Area --->
+        <div class="er-dash-main">
+
+            <!--- Topbar --->
+            <header class="er-dash-topbar">
+                <div class="er-dash-topbar-left">
+                    <button type="button" class="er-dash-menu-toggle" id="erDashMenuToggle" aria-label="Open navigation"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <div class="er-dash-page-heading">
+                        <span>STACKLY / WORKSPACE</span>
+                        <h1 id="erDashPageTitle">Admin Dashboard</h1>
+                    </div>
+                </div>
+
+                <div class="er-dash-topbar-right">
+                    <div class="er-dash-topbar-user">
+                        <div class="er-dash-topbar-user-info">
+                            <strong id="erDashTopbarName">Welcome</strong>
+                            <span id="erDashTopbarEmail">Loading email...</span>
+                        </div>
+                        <img src="assets/images/profile-1.webp" alt="Profile image" class="er-dash-topbar-avatar">
+                    </div>
+                </div>
+            </header>
+
+            <!--- Dashboard Content --->
+
+            <!--- Admin Overview --->
+            <main class="er-dash-content er-admin-overview" id="dashboard">
+
+                <!--- Overview Welcome --->
+                <section class="er-admin-overview-welcome">
+                    <div class="er-admin-overview-welcome-content">
+                        <span class="er-admin-overview-eyebrow">RESTAURANT MANAGEMENT</span>
+                        <h2>Good Day, <span>Administrator.</span></h2>
+                        <p>Here's an overview of your restaurant's performance and activity.</p>
+                    </div>
+                    <div class="er-admin-overview-welcome-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <div>
+                            <span>Today</span>
+                            <strong id="erAdminOverviewDate">Loading date...</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <!--- Overview Statistics --->
+                <section class="er-admin-overview-stats">
+                    <div class="er-admin-overview-stat-card">
+                        <div class="er-admin-overview-stat-top">
+                            <span>Total Reservations</span>
+                            <span class="er-admin-overview-stat-icon"><i
+                                    class="fa-regular fa-calendar-check"></i></span>
+                        </div>
+                        <div class="er-admin-overview-stat-value">
+                            <h3>1,284</h3>
+                            <span class="er-admin-overview-stat-change"><i class="fa-solid fa-arrow-up"></i>
+                                12.8%</span>
+                        </div>
+                        <p>Compared to last month</p>
+                        <div class="er-admin-overview-stat-line"><span style="width:78%"></span></div>
+                    </div>
+
+                    <div class="er-admin-overview-stat-card">
+                        <div class="er-admin-overview-stat-top">
+                            <span>Today's Bookings</span>
+                            <span class="er-admin-overview-stat-icon"><i class="fa-solid fa-calendar-day"></i></span>
+                        </div>
+                        <div class="er-admin-overview-stat-value">
+                            <h3>36</h3>
+                            <span class="er-admin-overview-stat-change"><i class="fa-solid fa-arrow-up"></i> 8.4%</span>
+                        </div>
+                        <p>Compared to yesterday</p>
+                        <div class="er-admin-overview-stat-line"><span style="width:62%"></span></div>
+                    </div>
+
+                    <div class="er-admin-overview-stat-card">
+                        <div class="er-admin-overview-stat-top">
+                            <span>Total Customers</span>
+                            <span class="er-admin-overview-stat-icon"><i class="fa-solid fa-users"></i></span>
+                        </div>
+                        <div class="er-admin-overview-stat-value">
+                            <h3>856</h3>
+                            <span class="er-admin-overview-stat-change"><i class="fa-solid fa-arrow-up"></i> 6.2%</span>
+                        </div>
+                        <p>Compared to last month</p>
+                        <div class="er-admin-overview-stat-line"><span style="width:70%"></span></div>
+                    </div>
+
+                    <div class="er-admin-overview-stat-card">
+                        <div class="er-admin-overview-stat-top">
+                            <span>Menu Items</span>
+                            <span class="er-admin-overview-stat-icon"><i class="fa-solid fa-utensils"></i></span>
+                        </div>
+                        <div class="er-admin-overview-stat-value">
+                            <h3>48</h3>
+                            <span class="er-admin-overview-stat-neutral">Active Items</span>
+                        </div>
+                        <p>Across all menu categories</p>
+                        <div class="er-admin-overview-stat-line"><span style="width:85%"></span></div>
+                    </div>
+                </section>
+
+                <!--- Overview Main Grid --->
+                <section class="er-admin-overview-main-grid">
+
+                    <!--- Reservation Activity --->
+                    <div class="er-admin-overview-panel er-admin-overview-activity">
+                        <div class="er-admin-overview-panel-heading">
+                            <div>
+                                <span class="er-admin-overview-section-label">PERFORMANCE</span>
+                                <h3>Reservation Activity</h3>
+                                <p>Weekly reservation overview</p>
+                            </div>
+                            <a href="404.html" class="er-admin-overview-panel-link">View Report <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+
+                        <div class="er-admin-overview-chart">
+                            <div class="er-admin-overview-chart-y">
+                                <span>50</span>
+                                <span>40</span>
+                                <span>30</span>
+                                <span>20</span>
+                                <span>10</span>
+                                <span>0</span>
+                            </div>
+                            <div class="er-admin-overview-chart-content">
+                                <div class="er-admin-overview-chart-grid">
+                                    <span></span><span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="er-admin-overview-chart-bars">
+                                    <div class="er-admin-overview-chart-column">
+                                        <div class="er-admin-overview-bar" style="height:48%"><span>24</span></div>
+                                        <small>Mon</small>
+                                    </div>
+                                    <div class="er-admin-overview-chart-column">
+                                        <div class="er-admin-overview-bar" style="height:68%"><span>34</span></div>
+                                        <small>Tue</small>
+                                    </div>
+                                    <div class="er-admin-overview-chart-column">
+                                        <div class="er-admin-overview-bar" style="height:56%"><span>28</span></div>
+                                        <small>Wed</small>
+                                    </div>
+                                    <div class="er-admin-overview-chart-column">
+                                        <div class="er-admin-overview-bar" style="height:82%"><span>41</span></div>
+                                        <small>Thu</small>
+                                    </div>
+                                    <div class="er-admin-overview-chart-column">
+                                        <div class="er-admin-overview-bar" style="height:70%"><span>35</span></div>
+                                        <small>Fri</small>
+                                    </div>
+                                    <div class="er-admin-overview-chart-column">
+                                        <div class="er-admin-overview-bar active" style="height:94%"><span>47</span>
+                                        </div><small>Sat</small>
+                                    </div>
+                                    <div class="er-admin-overview-chart-column">
+                                        <div class="er-admin-overview-bar" style="height:62%"><span>31</span></div>
+                                        <small>Sun</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="er-admin-overview-chart-footer">
+                            <span><i></i> Reservations</span>
+                            <strong>240 <small>Total this week</small></strong>
+                        </div>
+                    </div>
+
+                    <!--- Popular Dishes --->
+                    <div class="er-admin-overview-panel er-admin-overview-popular">
+                        <div class="er-admin-overview-panel-heading">
+                            <div>
+                                <span class="er-admin-overview-section-label">MENU PERFORMANCE</span>
+                                <h3>Popular Dishes</h3>
+                                <p>Most ordered this month</p>
+                            </div>
+                            <a href="404.html" class="er-admin-overview-panel-icon" aria-label="View menu"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+
+                        <div class="er-admin-overview-dish-list">
+                            <div class="er-admin-overview-dish">
+                                <img src="assets/images/dish-risotto.webp" alt="Truffle Mushroom Risotto">
+                                <div class="er-admin-overview-dish-info">
+                                    <strong>Truffle Mushroom Risotto</strong>
+                                    <span>Italian · Main Course</span>
+                                    <div class="er-admin-overview-dish-progress"><span style="width:88%"></span></div>
+                                </div>
+                                <strong class="er-admin-overview-dish-count">128 <small>orders</small></strong>
+                            </div>
+
+                            <div class="er-admin-overview-dish">
+                                <img src="assets/images/dish-salmon.webp" alt="Grilled Salmon">
+                                <div class="er-admin-overview-dish-info">
+                                    <strong>Herb-Crusted Salmon</strong>
+                                    <span>Continental · Seafood</span>
+                                    <div class="er-admin-overview-dish-progress"><span style="width:72%"></span></div>
+                                </div>
+                                <strong class="er-admin-overview-dish-count">104 <small>orders</small></strong>
+                            </div>
+
+                            <div class="er-admin-overview-dish">
+                                <img src="assets/images/dish-steak.webp" alt="Filet Mignon">
+                                <div class="er-admin-overview-dish-info">
+                                    <strong>Classic Filet Mignon</strong>
+                                    <span>Continental · Main Course</span>
+                                    <div class="er-admin-overview-dish-progress"><span style="width:59%"></span></div>
+                                </div>
+                                <strong class="er-admin-overview-dish-count">86 <small>orders</small></strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--- Recent Reservations --->
+                <section class="er-admin-overview-panel er-admin-overview-recent">
+                    <div class="er-admin-overview-panel-heading">
+                        <div>
+                            <span class="er-admin-overview-section-label">LATEST ACTIVITY</span>
+                            <h3>Recent Reservations</h3>
+                            <p>Keep track of your latest guest bookings.</p>
+                        </div>
+                        <a href="404.html" class="er-admin-overview-panel-link">View All <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="er-admin-overview-table">
+                        <div class="er-admin-overview-table-head">
+                            <span>GUEST</span>
+                            <span>BOOKING ID</span>
+                            <span>DATE & TIME</span>
+                            <span>GUESTS</span>
+                            <span>STATUS</span>
+                            <span>ACTION</span>
+                        </div>
+
+                        <div class="er-admin-overview-table-row">
+                            <div class="er-admin-overview-guest"><span
+                                    class="er-admin-overview-guest-avatar">AM</span><strong>Alexander Morgan</strong>
+                            </div>
+                            <span class="er-admin-overview-booking-id">#ER10284</span>
+                            <span class="er-admin-overview-booking-date">12 Nov 2026 <small>07:30 PM</small></span>
+                            <span class="er-admin-overview-guests">04 People</span>
+                            <span><b class="er-admin-overview-status confirmed">Confirmed</b></span>
+                            <a href="404.html" class="er-admin-overview-row-action" aria-label="View reservation"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+
+                        <div class="er-admin-overview-table-row">
+                            <div class="er-admin-overview-guest"><span
+                                    class="er-admin-overview-guest-avatar">SL</span><strong>Sophia Lee</strong></div>
+                            <span class="er-admin-overview-booking-id">#ER10283</span>
+                            <span class="er-admin-overview-booking-date">12 Nov 2026 <small>08:00 PM</small></span>
+                            <span class="er-admin-overview-guests">02 People</span>
+                            <span><b class="er-admin-overview-status pending">Pending</b></span>
+                            <a href="404.html" class="er-admin-overview-row-action" aria-label="View reservation"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+
+                        <div class="er-admin-overview-table-row">
+                            <div class="er-admin-overview-guest"><span
+                                    class="er-admin-overview-guest-avatar">JD</span><strong>James David</strong></div>
+                            <span class="er-admin-overview-booking-id">#ER10282</span>
+                            <span class="er-admin-overview-booking-date">13 Nov 2026 <small>06:30 PM</small></span>
+                            <span class="er-admin-overview-guests">06 People</span>
+                            <span><b class="er-admin-overview-status confirmed">Confirmed</b></span>
+                            <a href="404.html" class="er-admin-overview-row-action" aria-label="View reservation"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+
+                        <div class="er-admin-overview-table-row">
+                            <div class="er-admin-overview-guest"><span
+                                    class="er-admin-overview-guest-avatar">EC</span><strong>Emma Carter</strong></div>
+                            <span class="er-admin-overview-booking-id">#ER10281</span>
+                            <span class="er-admin-overview-booking-date">13 Nov 2026 <small>07:00 PM</small></span>
+                            <span class="er-admin-overview-guests">03 People</span>
+                            <span><b class="er-admin-overview-status cancelled">Cancelled</b></span>
+                            <a href="404.html" class="er-admin-overview-row-action" aria-label="View reservation"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!--- Overview Quick Actions --->
+                <section class="er-admin-overview-quick-actions">
+                    <div class="er-admin-overview-quick-heading">
+                        <div>
+                            <span class="er-admin-overview-section-label">QUICK ACCESS</span>
+                            <h3>Manage Your Restaurant</h3>
+                        </div>
+                    </div>
+                    <div class="er-admin-overview-action-grid">
+                        <a href="admin-menu.html" class="er-admin-overview-action">
+                            <span><i class="fa-solid fa-plus"></i></span>
+                            <div><strong>Add New Dish</strong><small>Expand your menu</small></div>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="admin-reservations.html" class="er-admin-overview-action">
+                            <span><i class="fa-regular fa-calendar-plus"></i></span>
+                            <div><strong>Manage Bookings</strong><small>Review reservations</small></div>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="404.html" class="er-admin-overview-action">
+                            <span><i class="fa-solid fa-chart-line"></i></span>
+                            <div><strong>View Analytics</strong><small>Explore performance</small></div>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </section>
+
+            </main>
+
+        </div>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-overview.js"></script>
+</body>
+
+</html>

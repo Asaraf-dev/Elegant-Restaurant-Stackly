@@ -1,0 +1,54 @@
+
+/*--- Page Loader ---*/
+.er-com-loader {position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;width:100%;height:100vh;height:100dvh;background:var(--er-dark);overflow:hidden;opacity:1;visibility:visible;transition:opacity .8s ease,visibility .8s ease;}
+.er-com-loader::before {content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(198,161,91,.09),transparent 55%);pointer-events:none;}
+.er-com-loader::after {content:"";position:absolute;inset:20px;border:1px solid rgba(198,161,91,.12);pointer-events:none;}
+.er-com-loader.er-loader-hidden {opacity:0;visibility:hidden;pointer-events:none;}
+/*--- Loader Particles ---*/
+.er-com-loader-particles {position:absolute;inset:0;overflow:hidden;pointer-events:none;}
+.er-ldr-particle {position:absolute;border-radius:50%;background:var(--er-primary);opacity:0;box-shadow:0 0 12px rgba(198,161,91,.6);animation:erLoaderParticleFloat 6s ease-in-out infinite;}
+@keyframes erLoaderParticleFloat {
+0%,100% {opacity:0;transform:translateY(15px) scale(.5);}
+50% {opacity:.65;transform:translateY(-25px) scale(1);}
+}
+/*--- Loader Content ---*/
+.er-com-loader-content {position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;width:100%;padding:30px 20px;text-align:center;}
+.er-com-loader-brand {margin-bottom:30px;animation:erLoaderFadeIn 1s ease both;}
+.er-com-loader-brand img {display:block;width:190px;height:75px;object-fit:contain;}
+/*--- Loader Animation ---*/
+.er-com-loader-animation {position:relative;display:flex;align-items:center;justify-content:center;width:110px;height:110px;margin-bottom:32px;}
+.er-com-loader-ring {position:absolute;inset:0;border:1px solid rgba(198,161,91,.2);border-radius:50%;}
+.er-com-loader-ring-one {border-top-color:var(--er-primary);border-right-color:var(--er-primary);animation:erLoaderRotate 2.5s linear infinite;}
+.er-com-loader-ring-two {inset:9px;border-bottom-color:var(--er-primary-light);border-left-color:var(--er-primary-light);animation:erLoaderRotateReverse 3.5s linear infinite;}
+.er-com-loader-ring-three {inset:19px;border-top-color:rgba(198,161,91,.6);animation:erLoaderRotate 4s linear infinite;}
+.er-com-loader-center {display:flex;align-items:center;justify-content:center;width:48px;height:48px;border:1px solid rgba(198,161,91,.3);border-radius:50%;background:rgba(198,161,91,.08);color:var(--er-primary);font-size:19px;animation:erLoaderPulse 2s ease-in-out infinite;}
+@keyframes erLoaderRotate {to {transform:rotate(360deg);}}
+@keyframes erLoaderRotateReverse {to {transform:rotate(-360deg);}}
+@keyframes erLoaderPulse {0%,100% {transform:scale(.92);box-shadow:0 0 0 rgba(198,161,91,0);}50% {transform:scale(1.08);box-shadow:0 0 25px rgba(198,161,91,.16);}}
+/*--- Loader Text ---*/
+.er-com-loader-text h2 {margin:0 0 12px;color:var(--er-cream);font-family:var(--er-font-heading);font-size:27px;font-weight:500;letter-spacing:.5px;}
+.er-com-loader-text p {min-height:22px;margin:0;color:var(--er-primary);font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:opacity .25s ease,transform .25s ease;}
+.er-com-loader-decoration {display:flex;align-items:center;gap:13px;margin-top:25px;color:var(--er-primary);font-size:9px;}
+.er-com-loader-decoration span {display:block;width:35px;height:1px;background:linear-gradient(90deg,transparent,var(--er-primary));}
+.er-com-loader-decoration span:last-child {transform:rotate(180deg);}
+@keyframes erLoaderFadeIn {from {opacity:0;transform:translateY(15px);}to {opacity:1;transform:translateY(0);}}
+/*--- Loader Exit ---*/
+.er-com-loader.er-loader-exit {opacity:0;visibility:hidden;pointer-events:none;}
+/*--- Responsive ---*/
+@media(max-width:767px) {
+.er-com-loader::after {inset:12px;}
+.er-com-loader-brand {margin-bottom:25px;}
+.er-com-loader-brand img {width:160px;height:65px;}
+.er-com-loader-animation {width:95px;height:95px;margin-bottom:27px;}
+.er-com-loader-center {width:42px;height:42px;font-size:17px;}
+.er-com-loader-text h2 {font-size:23px;}
+.er-com-loader-text p {font-size:9px;letter-spacing:1px;}
+}
+@media(max-width:575px) {
+.er-com-loader-brand img {width:145px;height:60px;}
+.er-com-loader-text h2 {font-size:21px;}
+.er-com-loader-text p {font-size:8px;}
+}
+@media(prefers-reduced-motion:reduce) {
+.er-com-loader *, .er-com-loader *::before, .er-com-loader *::after {animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
+}
