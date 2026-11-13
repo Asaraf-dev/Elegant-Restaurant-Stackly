@@ -173,7 +173,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     closeButton.addEventListener("click", closePopup);
-    doneButton.addEventListener("click", closePopup);
+    /*--- Reset Form After Successful Reservation ---*/
+    doneButton.addEventListener("click", function () {
+        closePopup();
+        form.reset();
+
+        // Clear validation errors
+        [nameInput, emailInput, phoneInput, guestsInput, dateInput, timeInput].forEach(clearError);
+
+        // Restore default date restriction
+        dateInput.min = localToday;
+    });
 
     popup.querySelector("[data-close-popup]").addEventListener("click", closePopup);
 
